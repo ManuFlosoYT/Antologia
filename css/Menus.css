@@ -268,6 +268,26 @@ h3{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER */
+
 header {
     background-color: #d6deb9;
 	background-image: url("../Imagenes/Header/header.jpg");
@@ -340,7 +360,8 @@ nav a {
 
 .fondo-header-inicio{
 	padding:0px;
-	margin:15px;
+	margin-right: 0px;
+	margin-left: 10px;
 	margin-top:0px;
 	margin-bottom: 0px;
     width: 75px;
@@ -354,9 +375,27 @@ nav a {
 	border-style: solid;
 }
 
+.fondo-header-volver{
+	padding:0px;
+	margin-right: 0px;
+	margin-left: 10px;
+	margin-top:0px;
+	margin-bottom: 0px;
+    width: 140px;
+	height:85px;
+    z-index: 100;
+
+	background-color: #ea899add;
+	border-radius: 5px;
+	border-color: #ff6088dd;
+	border-width: 4px;
+	border-style: solid;
+}
+
 .fondo-header-listado{
 	padding:0px;
-	margin:15px;
+	margin-right: 0px;
+	margin-left: 10px;
 	margin-top:0px;
 	margin-bottom: 0px;
     width: 200px;
@@ -372,7 +411,8 @@ nav a {
 
 .fondo-header-descarga{
 	padding:0px;
-	margin:15px;
+	margin-right: 0px;
+	margin-left: 10px;
 	margin-top:0px;
 	margin-bottom: 0px;
     width: 160px;
@@ -403,6 +443,52 @@ nav a {
 	border-style: solid;
 }
 
+.fondo-header-subir{
+	padding:0px;
+	background-color: #95959541;
+	margin-top:0px;
+	margin-bottom: 0px;
+    width: 100px;
+	height:100px;
+    z-index: 100;
+
+	background-color: #4f5382dd;
+	border-radius: 200px;
+	border-color: #572364dd;
+	border-width: 4px;
+	border-style: solid;
+}
+
+#miDiv {
+    position: fixed; /* Lo mantenemos fijo en la ventana */
+    bottom: 20px; /* Distancia desde abajo */
+    left: 20px; /* Distancia desde la izquierda */
+    width: 100px; /* Ancho del div */
+    height: 100px; /* Alto del div */
+    background-color: #00000000; /* Color de fondo */
+    padding: 10px; /* Espacio interno */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TEXTOS */
+
 .sangria-1{
     text-indent: -1.2em;
     padding-left: 40px;
@@ -432,6 +518,29 @@ nav a {
 .sangria-4P{
     padding-left: 140px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

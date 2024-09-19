@@ -1,0 +1,667 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('../Fuentes/Roboto-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url('../Fuentes/Roboto-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-image: url("../Imagenes/fondo.jpg");
+	width: 1300px;
+	background-size: cover; 
+    background-repeat: no-repeat;
+	margin-top: 120px;
+}
+
+div{
+	background-color: #00000000;
+}
+
+
+p{
+    color:#000000;
+    font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+	margin: 20px;
+	text-align: justify;
+	text-justify: auto;
+}
+
+section{
+	background-color: #00000000;
+	display: flex;
+    flex-direction: column;
+    width: 1300px;
+    padding: 70px;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+
+    gap: 20px; 
+}
+
+
+a{
+    margin: auto;
+}
+
+h1{
+    background-color: #00000000;
+    color: #000000;
+    font-size: 50px;
+	font-family: 'Roboto-Bold', sans-serif;
+}
+
+h2{
+	background-color: #00000000;
+    color: #000000;
+    font-size: 20px;
+	font-family: 'Roboto-Bold', sans-serif;
+}
+
+h3{
+    background-color: #00000000;
+	font-family: 'Roboto-Bold', sans-serif;
+}
+
+
+
+
+.fondo{
+	background-color: #d3d3d33e;
+	border-radius: 20px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.recuadro{
+	background-color: #90cfcd7f;
+	border-radius: 5px;
+	border-color: #205d91;
+	border-width: 4px;
+	border-style: solid;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}
+
+.recuadro2{
+	background-color: #90cfcd7f;
+	border-radius: 5px;
+	border-color: #205d91;
+	border-width: 4px;
+	border-style: solid;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
+
+.recuadro1{
+	background-color: #90cfcd7f;
+	border-radius: 5px;
+	border-color: #205d91;
+	border-width: 4px;
+	border-style: solid;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 10px;
+}
+
+.recuadro:last-child { /* Target the last row */
+	justify-self: center; /* Center the entire row if not full */
+	justify-items: center;
+}
+
+.image-container {
+	margin-top:20px;
+    width: 300px; /* Set desired container size */
+    height: 300px;
+	border-radius: 5px;
+    background-color: #00000000;
+}
+
+.image-container img {
+    background-color: #00000000;
+    width: 100%;
+    height: 100%;
+	border-radius: 5px;
+	border-color: #6b4423;
+	border-width: 4px;
+	border-style: solid;
+    object-fit: cover; /* Mantiene todas iguales, pero si no es el mismo formato se recorta */
+    /*object-fit: contain; Mantiene la imagen entera visible, si no es del mismo formato no queda igual */
+}
+
+.portada-image-container {
+    width: 750px; /* Set desired container size */
+    height: 350px;
+	border-radius: 5px;
+    background-color: #00000000;
+}
+
+.portada-image-container img {
+    background-color: #00000000;
+    width: 100%;
+    height: 100%;
+	border-radius: 5px;
+	border-color: #000000;
+	border-width: 4px;
+	border-style: solid;
+    object-fit: cover; /* Mantiene todas iguales, pero si no es el mismo formato se recorta */
+    /*object-fit: contain; Mantiene la imagen entera visible, si no es del mismo formato no queda igual */
+}
+
+.bloque{
+	align-items: center;
+	align-content: center;
+	margin: 100px;
+	margin-top:50px;
+	margin-bottom: 50px;
+	background-color: #FFFFFF7F;
+	border-color: #4c4c4c7f;
+	border-width: 8px;
+	border-style: solid;
+	border-radius: 5px;
+}
+
+.texto{
+	align-items: center;
+	align-content: center;
+	margin: 0px;
+	margin-top:-24px;
+	background-color: #daa520ff;
+	border-radius: 5px;
+	border-color: #705335;
+	border-width: 4px;
+	border-style: solid;
+	z-index: 10;
+	position: relative;
+}
+
+.texto2{
+	align-items: center;
+	align-content: center;
+	margin: 0px;
+	margin-top:-48px;
+	background-color: #daa520ff;
+	border-radius: 5px;
+	border-color: #705335;
+	border-width: 4px;
+	border-style: solid;
+	z-index: 10;
+	position: relative;
+}
+
+.titulo{
+	align-items: center;
+	align-content: center;
+	margin:50px;
+	margin-top:15px;
+	margin-bottom: 15px;
+	background-color: #ffc400FF;
+	border-radius: 5px;
+	border-color: #a0522d;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.titulo2{
+	align-items: center;
+	align-content: center;
+	margin:200px;
+	margin-top:15px;
+	margin-bottom: -35px;
+	background-color: #679f5aff;
+	border-radius: 5px;
+	border-color: rgb(53, 83, 46);
+	border-width: 4px;
+	border-style: solid;
+	position: relative;
+	z-index: 5;
+}
+
+.titulo3{
+	align-items: center;
+	align-content: center;
+	margin: 5px;
+	margin-top:5px;
+	background-color: #daa520ff;
+	border-radius: 5px;
+	border-color: #705335;
+	border-width: 4px;
+	border-style: solid;
+	z-index: 10;
+	position: relative;
+}
+
+.titulo4{
+	align-items: center;
+	align-content: center;
+	margin:200px;
+	margin-top:15px;
+	margin-bottom: 5px;
+	background-color: #679f5aff;
+	border-radius: 5px;
+	border-color: rgb(53, 83, 46);
+	border-width: 4px;
+	border-style: solid;
+	position: relative;
+	z-index: 5;
+}
+
+
+
+
+header {
+    background-color: #d6deb9;
+	background-image: url("../Imagenes/Header/header.jpg");
+	background-blend-mode: multiply, color;
+	background-repeat:initial;
+	background-size:contain;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+	border-color: rgb(0, 0, 0);
+	border-width: 4px;
+	border-style: solid;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+	align-items: left;
+	align-content: left;
+	text-align: left;
+}
+
+nav li {
+    display:inline-flex;
+    margin-right: 20px;
+	margin-bottom:-20px;
+
+	align-items: left;
+	align-content: left;
+	text-align: left;
+}
+
+nav li:last-child { /* Selecciona el último elemento de la lista */
+    float: right; /* Lo alinea a la derecha */
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.fondo-header{
+	padding:0px;
+	background-color: #95959500;
+	margin:-20px;
+	top: 0;
+    left: 0;
+    width: auto;
+    z-index: 100;
+}
+
+.image-header {
+    width: 50px; /* Set desired container size */
+    height: 50px;
+	border-radius: 5px;
+    background-color: #00000000;
+}
+
+.image-header img {
+    background-color: #00000000;
+    width: 100%;
+    height: 100%;
+}
+
+.fondo-header-inicio{
+	padding:0px;
+	margin:15px;
+	margin-top:0px;
+	margin-bottom: 0px;
+    width: 75px;
+	height:85px;
+    z-index: 100;
+
+	background-color: #0e6a94dd;
+	border-radius: 5px;
+	border-color: #333c87dd;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.fondo-header-listado{
+	padding:0px;
+	margin:15px;
+	margin-top:0px;
+	margin-bottom: 0px;
+    width: 200px;
+	height:85px;
+    z-index: 100;
+
+	background-color: #f6834fdd;
+	border-radius: 5px;
+	border-color: #e25f23dd;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.fondo-header-descarga{
+	padding:0px;
+	margin:15px;
+	margin-top:0px;
+	margin-bottom: 0px;
+    width: 160px;
+	height:85px;
+    z-index: 100;
+
+	background-color: #df9ba3dd;
+	border-radius: 5px;
+	border-color: #f28994dd;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.fondo-header-sorteos{
+	padding:0px;
+	background-color: #95959541;
+	margin:15px;
+	margin-top:0px;
+	margin-bottom: 0px;
+    width: 100px;
+	height:85px;
+    z-index: 100;
+
+	background-color: #fdda66dd;
+	border-radius: 5px;
+	border-color: #f5973ddd;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.sangria-1{
+    text-indent: -1.2em;
+    padding-left: 40px;
+}
+.sangria-2{
+    text-indent: -1.2em;
+    padding-left: 80px;
+}
+.sangria-3{
+    text-indent: -1.2em;
+    padding-left: 120px;
+}
+.sangria-4{
+    text-indent: -1.2em;
+    padding-left: 160px;
+}
+
+.sangria-1P{
+    padding-left: 20px;
+}
+.sangria-2P{
+    padding-left: 60px;
+}
+.sangria-3P{
+    padding-left: 100px;
+}
+.sangria-4P{
+    padding-left: 140px;
+}
+
+
+
+
+/* AUTORES */
+
+.portada{
+    float: right;
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 400px; 
+    height: 570px;
+    image-resolution: 4000px;
+}
+
+.imagen-libros{
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    width: 400px; 
+    height: 570px;
+    image-resolution: 4000px; 
+    display: block;
+}
+
+summary{
+    background: rgb(206, 182, 249);
+    color: black;
+    padding: 23px;
+    cursor: pointer;
+    text-align: center;
+    list-style: none;
+    font-size: 25pt;
+    border: 5px solid rgb(100, 100, 255);
+    font-weight: bold;
+	width: auto;
+}
+
+.libros-titulo{
+    background: rgb(164, 179, 252);
+    color: black;
+    padding: 23px;
+    cursor: pointer;
+    text-align: center;
+    list-style: none;
+    font-size: 30pt;
+    border: 5px solid rgb(62, 62, 250);
+    font-weight: bold; 
+	font-family: 'Roboto-Bold', sans-serif;
+	margin-left:-50px;
+	width:1250px;
+}
+
+.poemas-titulo{
+    background: rgb(164, 179, 252);
+    color: black;
+    padding: 23px;
+    cursor: pointer;
+    text-align: center;
+    list-style: none;
+    font-size: 30pt;
+    border: 5px solid rgb(62, 62, 250);
+    font-weight: bold; 
+	font-family: 'Roboto-Bold', sans-serif;
+	margin-left:-50px;
+	width:1200px;
+}
+
+.libros{
+	background-color: #90cfcd7f;
+	border-radius: 5px;
+	border-color: #205d91;
+	border-width: 4px;
+	border-style: solid;
+	border-radius: 20px;
+	margin-top:50px;
+	margin-bottom:10px;
+	margin-left:0px;
+	margin-right:0px;
+	width:1300px;
+}
+
+.titulo2-libros{
+	align-items: center;
+	align-content: center;
+	margin:200px;
+	margin-top:15px;
+	margin-bottom: -35px;
+	background-color: #679f5aff;
+	border-radius: 5px;
+	border-color: rgb(53, 83, 46);
+	border-width: 4px;
+	border-style: solid;
+	position: relative;
+	z-index: 5;
+}
+
+.fondo-libros{
+	background-color: #d3d3d33e;
+	border-radius: 20px;
+	margin:10px;
+	min-height:600px;
+	margin-left:-50px;
+	width:auto;
+	max-width: 1250px;
+}
+
+.poemas{
+    font-size: 40pt;
+	font-family: 'Roboto', sans-serif;
+    border: 5px solid rgb(247, 128, 9); 
+    background: rgb(254, 211, 70);
+    text-align: center;
+	margin:auto;
+	width: 1200px;
+	margin-left:-50px;
+}
+.fondo-poemas{
+	background-color: #90cfcd7f;
+	border-radius: 5px;
+	border-color: #205d91;
+	border-width: 4px;
+	border-style: solid;
+	border-radius: 20px;
+	margin-top:-5px;
+	margin-bottom:10px;
+	margin-left:0px;
+	margin-right:0px;
+	width:1250px;
+}
+
+.fondo-texto-poema{
+	background-color: #90cfcd7f;
+	border-radius: 5px;
+	border-color: #205d91;
+	border-width: 4px;
+	border-style: solid;
+	border-radius: 20px;
+
+	margin-left:-50px;
+
+	width:1200px;
+}
+
+pre{
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 10px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+    font-size: 24pt;
+	font-family: 'Roboto', sans-serif;
+}
+
+audio{
+    background-color: #f1a8e100; 
+	
+}
+
+.alineadoAudio{
+	margin-left:860px;
+	margin-bottom: 10px;
+}
+
+.line{
+    border-top: 5px solid #831314;
+
+    height: 5px;
+    max-width: 2000px;
+    padding-bottom: 2px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+	margin-top: -25px;
+}
+
+
+.h1-autor{
+    margin: 20px;
+    text-align: center;
+    line-height: normal;
+    color: #C7A934;
+	text-shadow: #000000 2px 2px 2px;
+    font-size: 50pt;
+    font-family: fantasy;
+    border-bottom: 5px solid #831314;
+    padding-bottom: 2px;
+    margin-bottom: 30px; 
+}
+
+.portada{
+    float: right;
+    margin-right: 15px;
+    margin-left: 15px;
+	margin-top:15px;
+    width: 400px; 
+    height: 570px;
+    image-resolution: 4000px;
+}
+
+.bloque-libro{
+	align-items: center;
+	align-content: center;
+	margin: 0px;
+	margin-top:5px;
+	margin-bottom: 5px;
+	background-color: #FFFFFF7F;
+	border-color: #4c4c4c7f;
+	border-width: 8px;
+	border-style: solid;
+	border-radius: 5px;
+}
+
+b{
+	text-align: center;
+	font-size: 26px;
+	font-family: 'Roboto-Bold', sans-serif;
+	margin-bottom: 15px;
+}
+
+
+h5{
+    background-color: #00000000;
+	font-family: 'Roboto-Bold', sans-serif;
+	text-align: right;
+	margin-right: 30px;
+	margin-top: 15px;
+	font-size: 26px;
+}

@@ -35,7 +35,7 @@ fetch('Textos/eternidades.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Platero y yo|Diario de un poeta recién casado|Eternidades|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Eternidades|Diario de un poeta recién casado|Eternidades|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
     const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
@@ -49,7 +49,7 @@ fetch('Textos/eternidades2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Platero y yo|Diario de un poeta recién casado|Eternidades|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Eternidades|Diario de un poeta recién casado|Eternidades|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
     const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
@@ -115,7 +115,7 @@ fetch('Textos/soledad.txt')
 
 //La Soledad Sonora
 
-fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+fetch('Textos/sonora.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
@@ -126,10 +126,10 @@ fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
     const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
     const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
 
-    document.getElementById('biografia2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+    document.getElementById('sonora').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
 
-fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+fetch('Textos/sonora2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
@@ -140,7 +140,7 @@ fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
     const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
     const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
 
-    document.getElementById('biografia2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+    document.getElementById('sonora2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/rosa.txt')

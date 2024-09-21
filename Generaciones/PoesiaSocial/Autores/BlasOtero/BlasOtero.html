@@ -1,155 +1,185 @@
 <!DOCTYPE html>
-<script src="script.js"></script>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
         <title>Blas de Otero</title>
-
-        <link rel="stylesheet" href="../../../../css/Autores.css" />
+        <link rel="stylesheet" href="../../../../css/Menus.css" />
+        <script src="script.js"></script>
     </head>
+
     <body>
-        <!-- <a href="../../Modernismo.html"><h3>Volver al inicio</h3></a> -->
+        <script src="../header.js"></script>
+   
 
-        <section class="divinicio">
+        <div class="fondo">
+        
+            
+
+            <h1 class="h1-autor">Blas de Otero</h1>
+
+
             <div>
-                <h1>Blas de Otero</h1>
+                <div class="bloque">
 
-                <img src="Imagenes/blas.png" class="portada">
-            
-                <p id="biografia"></p>            
-                <p id="biografia2"></p>               
-                <p id="biografia3"></p>
-            
+                    <img src="Imagenes/blas.png" class="portada">
+
+                    <p id="biografia"></p>
+                    <p id="biografia2"></p>
+                    <p id="biografia3"></p>
+                </div>
+                
                 <div class="line"></div>
                 
             </div>
-        </section>
 
-        <section class="principal">
+            <div class="titulo2-libros">
+                <h1>Libros:</h1>
+            </div>
 
-            <h2 class="h2libros">Libros</h2>
-            
-            <details>
-                <summary class="libros-titulo">Ángel fieramente humano</summary>
+            <section class="libros">
 
-                <div>
-                    <img  src="Imagenes/angel.JPG" class="libros"/>
+                <!-- EMPIEZA LIBRO -->
 
-                    <p class="texto-libro" id="angel"></p>
-                    <p class="texto-libro" id="angel2"></p>
-                </div>
+                <details>
 
-                <section class="seccionfondo">
-                    <div>
-                        <h2 class="poemas">Poemas:</h2>
-                    </div>
+                    <summary class="libros-titulo">Ángel fieramente humano</summary>
 
-                    <div></div>
-                    <div></div>
-
-                    <details>
-                        <summary>A la inmensa mayoría</summary>
-                        <div></div>
-                        <pre id="mayoria"></pre>
-
-
-                        <div class="alineadoAudio">
-                            <div class="marcoAudio">
-                                <b>Poema recitado:</b>
-                                <br>
-                                <audio controls>
-                                    <source src="Audio/A_la_inmensa_mayoria [-9epKyMSSHU].mp3" type="audio/mpeg">
-                                </audio>
+                    <div class="fondo-libros">
+                        <div>
+                            <div class="bloque-libro">
+                                <img src="Imagenes/angel.JPG" class="imagen-libros"/>
+                                <p class="texto-libro" id="angel"></p>
+                                <p class="texto-libro" id="angel2"></p>
                             </div>
+
                         </div>
-                    </details>
-                    
 
-                </section>
-            </details>
 
-            <details>
-                <summary class="libros-titulo">Redoble de conciencia</summary>
+                        <section class="fondo-poemas">
 
-                <div>
-                    <img  src="Imagenes/redoble.jpg" class="libros"/>
+                            <h2 class="poemas">Poemas:</h2>
 
-                    <p class="texto-libro" id="redoble"></p>
-                    <p class="texto-libro" id="redoble2"></p>
-                </div>
+                            <!-- EMPIEZA POEMA -->
+                            <details>
 
-                <section class="seccionfondo">
-                    <div>
-                        <h2 class="poemas">Poemas:</h2>
+
+                                <summary class="poemas-titulo">A la inmensa mayoría</summary>
+                                <div class="fondo-texto-poema">
+
+                                    <pre id="mayoria"></pre>
+                                    <div class="alineadoAudio">
+                                        <div class="marcoAudio">
+                                            <b>Poema recitado:</b>
+                                            <br>
+                                            <audio controls>
+                                                <source src="Audio/A_la_inmensa_mayoria [-9epKyMSSHU].mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                            
+                        </section>
+                        
                     </div>
+                </details>
 
-                    <div></div>
-                    <div></div>
+                <!-- EMPIEZA LIBRO -->
 
-                    <details>
-                        <summary>En el principio</summary>
-                        <div></div>
-                        <pre id="principio"></pre>
+                <details>
 
+                    <summary class="libros-titulo">Redoble de conciencia</summary>
 
-                        <div class="alineadoAudio">
-                            <div class="marcoAudio">
-                                <b>Cantautor/a:</b>
-                                <br>
-                                <b>Paco Ibañez</b>
-                                <br>
-                                <br>
-                                <audio controls>
-                                    <source src="Audio/Paco_Ibanez_-_En_el_Principio_-_Blas_de_Otero [eABVuX9eeDE].mp3" type="audio/mpeg">
-                                </audio>
+                    <div class="fondo-libros">
+                        <div>
+                            <div class="bloque-libro">
+                                <img src="Imagenes/redoble.jpg" class="imagen-libros"/>
+                                <p class="texto-libro" id="redoble"></p>
+                                <p class="texto-libro" id="redoble2"></p>
                             </div>
+
                         </div>
-                    </details>
-                    
 
-                </section>
-            </details>
 
-            <details>
-                <summary class="libros-titulo">Pido la paz y la palabra</summary>
+                        <section class="fondo-poemas">
 
-                <div>
-                    <img  src="Imagenes/paz.jpg" class="libros"/>
+                            <h2 class="poemas">Poemas:</h2>
 
-                    <p class="texto-libro" id="paz"></p>
-                    <p class="texto-libro" id="paz2"></p>
-                </div>
+                            <!-- EMPIEZA POEMA -->
+                            <details>
 
-                <section class="seccionfondo">
-                    <div>
-                        <h2 class="poemas">Poemas:</h2>
+
+                                <summary class="poemas-titulo">En el principio</summary>
+                                <div class="fondo-texto-poema">
+
+                                    <pre id="principio"></pre>
+                                    <div class="alineadoAudio">
+                                        <div class="marcoAudio">
+                                            <b>Cantautor/a:</b>
+                                            <br>
+                                            <b>Paco Ibañez</b>
+                                            <br>
+                                            <br>
+                                            <audio controls>
+                                                <source src="Audio/Paco_Ibanez_-_En_el_Principio_-_Blas_de_Otero [eABVuX9eeDE].mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                            
+                        </section>
+                        
                     </div>
+                </details>
 
-                    <div></div>
-                    <div></div>
+                <!-- EMPIEZA LIBRO -->
 
-                    <details>
-                        <summary>Pido la paz y la palabra</summary>
-                        <div></div>
-                        <pre id="paz3"></pre>
+                <details>
 
+                    <summary class="libros-titulo">Pido la paz y la palabra</summary>
 
-                        <div class="alineadoAudio">
-                            <div class="marcoAudio">
-                                <b>Poema recitado:</b>
-                                <br>
-                                <audio controls>
-                                    <source src="Audio/PIDO_LA_PAZ_Y_LA_PALABRA_de_Blas_de_Otero [j3yFgsFjYPs].mp3" type="audio/mpeg">
-                                </audio>
+                    <div class="fondo-libros">
+                        <div>
+                            <div class="bloque-libro">
+                                <img src="Imagenes/paz.jpg" class="imagen-libros"/>
+                                <p class="texto-libro" id="paz"></p>
+                                <p class="texto-libro" id="paz2"></p>
                             </div>
-                        </div>
-                    </details>
-                    
 
-                </section>
-            </details>
-        
-        </section>
+                        </div>
+
+
+                        <section class="fondo-poemas">
+
+                            <h2 class="poemas">Poemas:</h2>
+
+                            <!-- EMPIEZA POEMA -->
+                            <details>
+
+
+                                <summary class="poemas-titulo">Pido la paz y la palabra</summary>
+                                <div class="fondo-texto-poema">
+
+                                    <pre id="paz3"></pre>
+                                    <div class="alineadoAudio">
+                                        <div class="marcoAudio">
+                                            <b>Poema recitado:</b>
+                                            <br>
+                                            <audio controls>
+                                                <source src="Audio/PIDO_LA_PAZ_Y_LA_PALABRA_de_Blas_de_Otero [j3yFgsFjYPs].mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                            
+                        </section>
+                        
+                    </div>
+                </details>
+
+            </section>
+        </div>
     </body>
 </html>

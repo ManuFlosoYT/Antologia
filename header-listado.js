@@ -8,10 +8,10 @@ function createHeader() {
             <nav>
                 <ul>
                     <li>
-                        <a href="../../../../index.html">
+                        <a href="index.html">
                             <div class="fondo-header-inicio">
                                 <div class="image-header">
-                                    <img src="../../../../Imagenes/Header/home.webp">
+                                    <img src="Imagenes/Header/home.webp">
                                 </div>
                                 <h2>Inicio</h2>
                             </div>
@@ -45,7 +45,7 @@ function createHeader() {
             <a href="#" >
                 <div class="fondo-header-subir">
                     <div class="image-header">
-                        <img src="../../../../Imagenes/Header/subir.png">
+                        <img src="Imagenes/Header/subir.png">
                     </div>
                     <h2>Subir</h2>
                 </div>

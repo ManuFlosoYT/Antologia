@@ -1,63 +1,82 @@
 <!DOCTYPE html>
-<script src="script.js"></script>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
         <title>Josefina de la Torre</title>
-
-        <link rel="stylesheet" href="../../../../css/Autores.css" />
+        <link rel="stylesheet" href="../../../../css/Menus.css" />
+        <script src="script.js"></script>
     </head>
+
     <body>
-        <!-- <a href="../../Modernismo.html"><h3>Volver al inicio</h3></a> -->
+        <script src="../header.js"></script>
+   
 
-        <section class="divinicio">
+        <div class="fondo">
+        
+            
+
+            <h1 class="h1-autor">Josefina de la Torre</h1>
+
+
             <div>
-                <h1>Josefina de la Torre</h1>
+                <div class="bloque">
 
-                <img src="Imagenes/Josefina de la torre.jpeg" class="portada">
-            
-                <p id="biografia"></p>            
-                <p id="biografia2"></p>               
-                <p id="biografia3"></p>
-            
+                    <img src="Imagenes/Josefina de la torre.jpeg" class="portada">
+
+                    <p id="biografia"></p>
+                    <p id="biografia2"></p>
+                    <p id="biografia3"></p>
+                </div>
+                
                 <div class="line"></div>
                 
             </div>
-        </section>
 
-        <section class="principal">
+            <div class="titulo2-libros">
+                <h1>Libros:</h1>
+            </div>
 
-            <h2 class="h2libros">Libros</h2>
-            
-            <details>
-                <summary class="libros-titulo">Versos y estampas</summary>
+            <section class="libros">
 
-                <div>
-                    <img  src="Imagenes/versos.webp" class="libros"/>
+                <!-- EMPIEZA LIBRO -->
 
-                    <p class="texto-libro" id="versos"></p>
-                    <p class="texto-libro" id="versos2"></p>
-                </div>
+                <details>
 
-                <section class="seccionfondo">
-                    <div>
-                        <h2 class="poemas">Poemas:</h2>
+                    <summary class="libros-titulo">Versos y estampas</summary>
+
+                    <div class="fondo-libros">
+                        <div>
+                            <div class="bloque-libro">
+                                <img src="Imagenes/versos.webp" class="imagen-libros"/>
+                                <p class="texto-libro" id="versos"></p>
+                                <p class="texto-libro" id="versos2"></p>
+                            </div>
+
+                        </div>
+
+
+                        <section class="fondo-poemas">
+
+                            <h2 class="poemas">Poemas:</h2>
+
+                            <!-- EMPIEZA POEMA -->
+                            <details>
+
+
+                                <summary class="poemas-titulo">Mis años compañeros</summary>
+                                <div class="fondo-texto-poema">
+
+                                    <pre id="compañeros"></pre>
+
+                                </div>
+                            </details>
+                            
+                        </section>
+                        
                     </div>
+                </details>
 
-                    <div></div>
-                    <div></div>
-
-                    <details>
-                        <summary>Mis años compañeros</summary>
-
-                        <pre id="compañeros"></pre>
-                    </details>
-                 
-                </section>
-            </details>
-
-            </details>
-        </section>
+            </section>
+        </div>
     </body>
 </html>

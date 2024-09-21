@@ -1,93 +1,115 @@
 <!DOCTYPE html>
-<script src="script.js"></script>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
         <title>Claudio Rodríguez</title>
-
-        <link rel="stylesheet" href="../../../../css/Autores.css" />
+        <link rel="stylesheet" href="../../../../css/Menus.css" />
+        <script src="script.js"></script>
     </head>
+
     <body>
-        <!-- <a href="../../Modernismo.html"><h3>Volver al inicio</h3></a> -->
+        <script src="../header.js"></script>
+   
 
-        <section class="divinicio">
+        <div class="fondo">
+        
+            
+
+            <h1 class="h1-autor">Claudio Rodríguez</h1>
+
+
             <div>
-                <h1>Claudio Rodríguez</h1>
+                <div class="bloque">
 
-                <img src="Imagenes/Claudio rodriguez.JPG" class="portada">
-            
-                <p id="biografia"></p>
-                <p id="biografia2"></p>
-                <p id="biografia3"></p>
-            
+                    <img src="Imagenes/Claudio rodriguez.JPG" class="portada">
+
+                    <p id="biografia"></p>
+                    <p id="biografia2"></p>
+                    <p id="biografia3"></p>
+                </div>
+                
                 <div class="line"></div>
                 
             </div>
-        </section>
 
-        <section class="principal">
+            <div class="titulo2-libros">
+                <h1>Libros:</h1>
+            </div>
 
-            <h2 class="h2libros">Libros</h2>
-            
-            <details>
-                <summary class="libros-titulo">Don de la ebriedad</summary>
+            <section class="libros">
 
-                <div>
-                    <img  src="Imagenes/Don de la ebriedad.jpg" class="libros"/>
+                <!-- EMPIEZA LIBRO -->
 
-                    <p class="texto-libro" id="don"></p>
-                    <p class="texto-libro" id="don2"></p>
+                <details>
 
-                </div>
+                    <summary class="libros-titulo">Don de la ebriedad</summary>
 
-                <section class="seccionfondo">
-                    <div>
-                        <h2 class="poemas">Poemas:</h2>
+                    <div class="fondo-libros">
+                        <div>
+                            <div class="bloque-libro">
+                                <img src="Imagenes/Don de la ebriedad.jpg" class="imagen-libros"/>
+                                <p class="texto-libro" id="don"></p>
+                                <p class="texto-libro" id="don2"></p>
+                            </div>
+
+                        </div>
+
+
+                        <section class="fondo-poemas">
+
+                            <h2 class="poemas">Poemas:</h2>
+
+                            <!-- EMPIEZA POEMA -->
+                            <details>
+
+
+                                <summary class="poemas-titulo">Don de la ebriedad</summary>
+                                <div class="fondo-texto-poema">
+
+                                    <pre id="ebriedad"></pre>
+                                    <div class="alineadoAudio">
+                                        <div class="marcoAudio">
+                                            <b>Poema recitado:</b>
+                                            <br>
+                                            <b>Voz de Claudio Rodríguez</b>
+                                            <br>
+                                            <br>
+                                            <audio controls>
+                                                <source src="Audio/Poema_Don_de_la_ebriedad_recitado_por_su_autor_Claudio_Rodriguez [nRVzFpPYP4Q].mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                            <!-- EMPIEZA POEMA -->
+                            <details>
+
+
+                                <summary class="poemas-titulo">Alto jornal</summary>
+                                <div class="fondo-texto-poema">
+
+                                    <pre id="jornal"></pre>
+                                    <div class="alineadoAudio">
+                                        <div class="marcoAudio">
+                                            <b>Cantautor/a:</b>
+                                            <br>
+                                            <b>Luis Ramos</b>
+                                            <br>
+                                            <br>
+                                            <audio controls>
+                                                <source src="Audio/Claudio_Rodriguez_-_Luis_Ramos_Alto_jornal.wmv [qfLChU2TWIQ].mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                            
+                        </section>
+                        
                     </div>
+                </details>
 
-                    <div></div>
-                    <div></div>
-
-                    <details>
-                        <summary>Don de la ebriedad</summary>
-                        <div class="fondoAzul">
-                        <pre id="ebriedad"></pre>
-
-                        <div class="alineadoAudio">
-                            <div class="marcoAudio">
-                                <b>Poema recitado:</b>
-                                <br>
-                                <b>Voz de Claudio Rodríguez</b>
-                                <br>
-                                <br>
-                                <audio controls>
-                                    <source src="Audio/Poema_Don_de_la_ebriedad_recitado_por_su_autor_Claudio_Rodriguez [nRVzFpPYP4Q].mp3" type="audio/mpeg">
-                                </audio>
-                            </div>
-                        </div>
-                    </details> 
-                    
-                    <details>
-                        <summary>Alto jornal</summary>
-                        <div class="fondoAzul">
-                        <pre id="jornal"></pre>
-
-                        <div class="alineadoAudio">
-                            <div class="marcoAudio">
-                                <b>Cantautor/a:</b>
-                                <br>
-                                <b>Luis Ramos</b>
-                                <br>
-                                <br>
-                                <audio controls>
-                                    <source src="Audio/Claudio_Rodriguez_-_Luis_Ramos_Alto_jornal.wmv [qfLChU2TWIQ].mp3" type="audio/mpeg">
-                                </audio>
-                            </div>
-                        </div>
-                    </details> 
-                </section>
-            </details>
-        </section>
+            </section>
+        </div>
     </body>
 </html>

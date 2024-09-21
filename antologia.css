@@ -774,3 +774,40 @@ h5{
 	margin-top: 15px;
 	font-size: 26px;
 }
+
+
+
+
+
+
+
+
+
+/* LISTADO */
+
+.listado{
+	display: flex; /* Use flexbox for easy horizontal alignment */
+	align-items: flex-start;
+	justify-content: left;
+	margin:0px;
+	width:1000px;
+}
+
+.youtube{
+	max-width: 75px; /* Adjust the image size as needed */
+	margin-right: 20px; /* Add some space between the image and text */
+	margin-left:0px;
+}
+
+
+.container {
+	display: flex; /* Use flexbox for easy alignment */
+	flex-direction: column; /* Stack items vertically */
+	align-items: flex-start; /* Align items to the left */
+}
+
+.container a {
+	/* Style the links as needed */
+	display: block; /* Ensure links take up full width */
+	margin-bottom: 5px; /* Add spacing between links */
+}

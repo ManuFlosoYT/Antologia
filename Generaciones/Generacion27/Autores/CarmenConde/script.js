@@ -51,13 +51,6 @@ fetch('Textos/contigo.txt')
     }
 ).catch(error => console.error('Error fetching file:', error));
 
-fetch('Textos/sonrisas.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('sonrisas').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
 
 //Los poemas de Mar Menor
 

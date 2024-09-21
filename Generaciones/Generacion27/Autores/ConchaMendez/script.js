@@ -110,3 +110,29 @@ fetch('Textos/entiendo.txt')
         document.getElementById('entiendo').textContent = text;
     }
 ).catch(error => console.error('Error fetching file:', error));
+
+//Inquietudes
+
+fetch('Textos/inquietudes.txt')
+    .then(response => response.text())
+    .then(text => 
+    {
+        document.getElementById('inquietudes').textContent = text;
+    }
+).catch(error => console.error('Error fetching file:', error));
+
+fetch('Textos/inquietudes2.txt')
+    .then(response => response.text())
+    .then(text => 
+    {
+        document.getElementById('inquietudes2').textContent = text;
+    }
+).catch(error => console.error('Error fetching file:', error));
+
+fetch('Textos/sonrisas.txt')
+    .then(response => response.text())
+    .then(text => 
+    {
+        document.getElementById('sonrisas').textContent = text;
+    }
+).catch(error => console.error('Error fetching file:', error));

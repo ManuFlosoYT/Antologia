@@ -67,6 +67,13 @@ fetch('Textos/Resumen.txt')
     }
 ).catch(error => console.error('Error fetching file:', error));
 
+fetch('Textos/inmortalidad.txt')
+    .then(response => response.text())
+    .then(text => 
+    {
+        document.getElementById('inmortalidad').textContent = text;
+    }
+).catch(error => console.error('Error fetching file:', error));
 
 
 //Habitaciones separadas

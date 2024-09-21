@@ -1,13 +1,13 @@
 @font-face {
 	font-family: 'Roboto';
-	src: url('../Fuentes/Roboto-Regular.ttf') format('truetype');
+	src: url('Fuentes/Roboto-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Roboto-Bold';
-	src: url('../Fuentes/Roboto-Bold.ttf') format('truetype');
+	src: url('Fuentes/Roboto-Bold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -290,7 +290,7 @@ h3{
 
 header {
     background-color: #d6deb9;
-	background-image: url("../Imagenes/Header/header.jpg");
+	background-image: url("Imagenes/Header/header.jpg");
 	background-blend-mode: multiply, color;
 	background-repeat:initial;
 	background-size:contain;

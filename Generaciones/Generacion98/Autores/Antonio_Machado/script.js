@@ -33,7 +33,7 @@ fetch('Textos/biografia3.txt')
 
 //Campos de Castilla
 
-fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+fetch('Textos/campos.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
@@ -44,10 +44,10 @@ fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
     const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
     const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
 
-    document.getElementById('biografia2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+    document.getElementById('campos').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
 
-fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+fetch('Textos/campos2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
@@ -58,7 +58,7 @@ fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
     const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
     const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
 
-    document.getElementById('biografia2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+    document.getElementById('campos2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/olmo.txt')
@@ -119,7 +119,7 @@ fetch('Textos/caminante.txt')
 
 //Soledades, galerías y otros poemas
 
-fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+fetch('Textos/soledades.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
@@ -130,7 +130,7 @@ fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
     const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
     const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
 
-    document.getElementById('biografia2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+    document.getElementById('soledades').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/soledades2.txt') //CAMBIAR ESTO PARA CONFIGURAR

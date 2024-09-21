@@ -36,7 +36,7 @@ fetch('Textos/biografia3.txt')
 fetch('Textos/campos.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
-    const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnNegrita = /(Campos de Castilla|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesEnCursiva = /(Soledades|Campos de Castilla|Nuevas canciones|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
@@ -50,7 +50,7 @@ fetch('Textos/campos.txt') //CAMBIAR ESTO PARA CONFIGURAR
 fetch('Textos/campos2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
-    const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnNegrita = /(Campos de Castilla|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesEnCursiva = /(Soledades|Campos de Castilla|Nuevas canciones|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
@@ -123,7 +123,7 @@ fetch('Textos/soledades.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Soledades|Campos de Castilla|Nuevas canciones|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Soledades, galerías y otros poemas|Campos de Castilla|Nuevas canciones|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
     const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
@@ -137,7 +137,7 @@ fetch('Textos/soledades2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Soledades|Campos de Castilla|Nuevas canciones|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Soledades, galerías y otros poemas|Campos de Castilla|Nuevas canciones|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
     const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 

@@ -78,14 +78,6 @@ fetch('Textos/noche.txt')
     }
 ).catch(error => console.error('Error fetching file:', error));
 
-fetch('Textos/sencillo.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('cencillo').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
-
 
 //A veces gran amor
 

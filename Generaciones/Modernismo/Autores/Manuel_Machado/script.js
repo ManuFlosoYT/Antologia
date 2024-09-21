@@ -68,37 +68,6 @@ fetch('Textos/ocaso.txt')
     }
 ).catch(error => console.error('Error fetching file:', error));
 
-
-//El mal poema
-
-fetch('Textos/mal.txt') //CAMBIAR ESTO PARA CONFIGURAR
-  .then(response => response.text())
-  .then(texto => {
-    const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Azul|Prosas profanas|Cantos de vida y esperanza)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-
-    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
-    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
-    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
-
-    document.getElementById('mal').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
-}).catch(error => console.error('Error al cargar el archivo:', error));
-
-fetch('Textos/mal2.txt') //CAMBIAR ESTO PARA CONFIGURAR
-  .then(response => response.text())
-  .then(texto => {
-    const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Azul|Prosas profanas|Cantos de vida y esperanza)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-
-    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
-    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
-    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
-
-    document.getElementById('mal2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
-}).catch(error => console.error('Error al cargar el archivo:', error));
-
 fetch('Textos/retrato.txt')
     .then(response => response.text())
     .then(text => 

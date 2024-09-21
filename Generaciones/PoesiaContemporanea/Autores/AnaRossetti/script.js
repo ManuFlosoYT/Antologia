@@ -27,7 +27,7 @@ fetch('Textos/biografia3.txt')
 
 //Indicios vehementes
 
-fetch('Textos/inicios.txt')
+fetch('Textos/Inicios.txt')
     .then(response => response.text())
     .then(text => 
     {

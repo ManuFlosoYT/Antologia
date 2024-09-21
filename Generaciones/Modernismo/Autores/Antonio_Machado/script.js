@@ -1,10 +1,3 @@
-window.addEventListener('scroll', function() {
-    var imagen = document.getElementById('volver');
-    var scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-    imagen.style.bottom = (20 + scrollTop) + 'px'; 
-});
-
 //Biografía del autor
 
 fetch('Textos/biografia.txt')

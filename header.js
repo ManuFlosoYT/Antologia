@@ -8,16 +8,6 @@ function createHeader() {
             <nav>
                 <ul>
                     <li>
-                        <a href="Antología de poesía del siglo XX.pdf" download>
-                            <div class="fondo-header-descarga">
-                                <div class="image-header">
-                                    <img src="Imagenes/Header/descarga.png">
-                                </div>
-                                <h2>Descargar PDF</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
                         <a href="Listado.html">
                             <div class="fondo-header-listado">
                                 <div class="image-header">
@@ -27,6 +17,16 @@ function createHeader() {
                             </div>
                         </a>
                     </li>
+                    <li>
+                        <a href="Antología de poesía del siglo XX.pdf" download>
+                            <div class="fondo-header-descarga">
+                                <div class="image-header">
+                                    <img src="Imagenes/Header/descarga.png">
+                                </div>
+                                <h2>Descargar PDF</h2>
+                            </div>
+                        </a>
+                    </li>      
                     <li>
                         <a href="Sorteos/Sorteos.html">
                             <div class="fondo-header-sorteos">

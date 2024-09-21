@@ -1,62 +1,81 @@
 <!DOCTYPE html>
-<script src="script.js"></script>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
         <title>Luis Alberto de Cuenca</title>
-
-        <link rel="stylesheet" href="../../../../css/Autores.css" />
+        <link rel="stylesheet" href="../../../../css/Menus.css" />
+        <script src="script.js"></script>
     </head>
+
     <body>
-        <!-- <a href="../../Modernismo.html"><h3>Volver al inicio</h3></a> -->
+        <script src="../header.js"></script>
+   
 
-        <section class="divinicio">
+        <div class="fondo">
+        
+            
+
+            <h1 class="h1-autor">Luis Alberto de Cuenca</h1>
+
+
             <div>
-                <h1>Luis Alberto de Cuenca</h1>
+                <div class="bloque">
 
-                <img src="Imagenes/Luis alberto de cuenca.jpg" class="portada">
-            
-                <p id="biografia"></p>
-                <p id="biografia2"></p>
-                <p id="biografia3"></p>
-            
+                    <img src="Imagenes/Luis alberto de cuenca.jpg" class="portada">
+
+                    <p id="biografia"></p>
+                    <p id="biografia2"></p>
+                    <p id="biografia3"></p>
+                </div>
+                
                 <div class="line"></div>
                 
             </div>
-        </section>
 
-        <section class="principal">
+            <div class="titulo2-libros">
+                <h1>Libros:</h1>
+            </div>
 
-            <h2 class="h2libros">Libros</h2>
-            
-            <details>
-                <summary class="libros-titulo">Scholia</summary>
+            <section class="libros">
 
-                <div>
-                    <img  src="Imagenes/Scholia.jpg" class="libros"/>
+                <!-- EMPIEZA LIBRO -->
 
-                    <p class="texto-libro" id="scholia"></p>
-                    <p class="texto-libro" id="scholia2"></p>
+                <details>
 
-                </div>
+                    <summary class="libros-titulo">Scholia</summary>
 
-                <section class="seccionfondo">
-                    <div>
-                        <h2 class="poemas">Poemas:</h2>
+                    <div class="fondo-libros">
+                        <div>
+                            <div class="bloque-libro">
+                                <img src="Imagenes/Scholia.jpg" class="imagen-libros"/>
+                                <p class="texto-libro" id="scholia"></p>
+                                <p class="texto-libro" id="scholia2"></p>
+                            </div>
+
+                        </div>
+
+
+                        <section class="fondo-poemas">
+
+                            <h2 class="poemas">Poemas:</h2>
+
+                            <!-- EMPIEZA POEMA -->
+                            <details>
+
+
+                                <summary class="poemas-titulo">Alicia Liddell abandona el país de las maravillas</summary>
+                                <div class="fondo-texto-poema">
+                                    <pre id="alicia"></pre>
+
+                                </div>
+                            </details>
+                            
+                        </section>
+                        
                     </div>
+                </details>
 
-                    <div></div>
-                    <div></div>
-
-                    <details>
-                        <summary>Alicia Liddell abandona el país de las maravillas</summary>
-                        <div class="fondoAzul">
-                        <pre id="alicia"></pre>
-
-                    </details>             
-                </section>
-            </details>
-        </section>
+            </section>
+        </div>
     </body>
 </html>

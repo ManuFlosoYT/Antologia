@@ -36,7 +36,7 @@ fetch('Textos/poesias.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Poesias|Campos de Castilla|Nuevas canciones|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Poesías|Campos de Castilla|Nuevas canciones|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
     const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
@@ -50,7 +50,7 @@ fetch('Textos/poesias2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(tendencia a la vanguardia|tendencia al compromiso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Poesias|Campos de Castilla|Nuevas canciones|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Poesías|Campos de Castilla|Nuevas canciones|La Lola se va a los puertos|La Lola se va a los puertos)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
     const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 

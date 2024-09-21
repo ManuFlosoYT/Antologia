@@ -1,127 +1,151 @@
 <!DOCTYPE html>
-<script src="script.js"></script>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
         <title>Jaime Gil de Biedma</title>
-
-        <link rel="stylesheet" href="../../../../css/Autores.css" />
+        <link rel="stylesheet" href="../../../../css/Menus.css" />
+        <script src="script.js"></script>
     </head>
+
     <body>
-        <!-- <a href="../../Modernismo.html"><h3>Volver al inicio</h3></a> -->
+        <script src="../header.js"></script>
+   
 
-        <section class="divinicio">
+        <div class="fondo">
+        
+            
+
+            <h1 class="h1-autor">Jaime Gil de Biedma</h1>
+
+
             <div>
-                <h1>Jaime Gil de Biedma</h1>
+                <div class="bloque">
 
-                <img src="Imagenes/Gil de biedma.jpeg" class="portada">
-            
-                <p id="biografia"></p>
-                <p id="biografia2"></p>
-                <p id="biografia3"></p>
-            
+                    <img src="Imagenes/Gil de biedma.jpeg" class="portada">
+
+                    <p id="biografia"></p>
+                    <p id="biografia2"></p>
+                    <p id="biografia3"></p>
+                </div>
+                
                 <div class="line"></div>
                 
             </div>
-        </section>
 
-        <section class="principal">
+            <div class="titulo2-libros">
+                <h1>Libros:</h1>
+            </div>
 
-            <h2 class="h2libros">Libros</h2>
+            <section class="libros">
+
+                <!-- EMPIEZA LIBRO -->
+
+                <details>
+
+                    <summary class="libros-titulo">Poemas Póstumos</summary>
+
+                    <div class="fondo-libros">
+                        <div>
+                            <div class="bloque-libro">
+                                <img src="Imagenes/Poemas-póstumos-1965-67.-Gil-de-Biedma.jpeg" class="imagen-libros"/>
+                                <p class="texto-libro" id="postumo"></p>
+                                <p class="texto-libro" id="postumo2"></p>
+                            </div>
+
+                        </div>
+
+
+                        <section class="fondo-poemas">
+
+                            <h2 class="poemas">Poemas:</h2>
+
+                            <!-- EMPIEZA POEMA -->
+                            <details>
+
+
+                                <summary class="poemas-titulo">Contra Jaime Gil de Biedma</summary>
+                                <div class="fondo-texto-poema">
+
+                                    <pre id="Gil"></pre>
+                                    <div class="alineadoAudio">
+                                        <div class="marcoAudio">
+                                            <b>Poema recitado:</b>
+                                            <br>
+                                            <b>Voz de Jaime Gil de Biedma</b>
+                                            <br>
+                                            <br>
+                                            <audio controls>
+                                                <source src="Audio/Contra_Jaime_Gil_de_Biedma. [cSfiCEtceGQ].mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
             
-            <details>
-                <summary class="libros-titulo">Poemas Póstumos</summary>
+                                    <div class="alineadoAudio">
+                                        <div class="marcoAudio">
+                                            <b>Cantautor/a:</b>
+                                            <br>
+                                            <b>Joaquín Sabina</b>
+                                            <br>
+                                            <br>
+                                            <audio controls>
+                                                <source src="Audio/Contra_J.G.B_-_Joaquin_Sabina [J9qX11ARyeE].mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                            <!-- EMPIEZA POEMA -->
+                            <details>
 
-                <div>
-                    <img  src="Imagenes/Poemas-póstumos-1965-67.-Gil-de-Biedma.jpeg" class="libros"/>
 
-                    <p class="texto-libro" id="postumo"></p>
-                    <p class="texto-libro" id="postumo2"></p>
+                                <summary class="poemas-titulo">Infancia y confesion</summary>
+                                <div class="fondo-texto-poema">
 
-                </div>
+                                    <pre id="infancia"></pre>
+                                    
+                                </div>
+                            </details>
+                            <!-- EMPIEZA POEMA -->
+                            <details>
 
-                <section class="seccionfondo">
-                    <div>
-                        <h2 class="poemas">Poemas:</h2>
+
+                                <summary class="poemas-titulo">No volveré a ser joven</summary>
+                                <div class="fondo-texto-poema">
+
+                                    <pre id="joven"></pre>
+                                    <div class="alineadoAudio">
+                                        <div class="marcoAudio">
+                                            <b>Poema recitado:</b>
+                                            <br>
+                                            <b>Voz de Jaime Gil de Biedma</b>
+                                            <br>
+                                            <br>
+                                            <audio controls>
+                                                <source src="Audio/Jaime_Gil_de_Biedma_No_volvere_a_ser_joven [Km5ONq9y-Z0].mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                    <div class="alineadoAudio">
+                                        <div class="marcoAudio">
+                                            <b>Cantautor/a:</b>
+                                            <br>
+                                            <b>Joan Manuel Serrat</b>
+                                            <br>
+                                            <br>
+                                            <audio controls>
+                                                <source src="Audio/Joan_Manuel_Serrat_-_No_volvere_a_ser_joven_-_Poema_de_Jaime_Gil_de_Biedma [vAHF0ybLcOo].mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                            
+                        </section>
+                        
                     </div>
+                </details>
 
-                    <div></div>
-                    <div></div>
-
-                    <details>
-                        <summary>Contra Jaime Gil de Biedma</summary>
-                        <div class="fondoAzul">
-                        <pre id="Gil"></pre>
-
-                        <div class="alineadoAudio">
-                            <div class="marcoAudio">
-                                <b>Poema recitado:</b>
-                                <br>
-                                <b>Voz de Jaime Gil de Biedma</b>
-                                <br>
-                                <br>
-                                <audio controls>
-                                    <source src="Audio/Contra_Jaime_Gil_de_Biedma. [cSfiCEtceGQ].mp3" type="audio/mpeg">
-                                </audio>
-                            </div>
-                        </div>
-
-                        <div class="alineadoAudio">
-                            <div class="marcoAudio">
-                                <b>Cantautor/a:</b>
-                                <br>
-                                <b>Joaquín Sabina</b>
-                                <br>
-                                <br>
-                                <audio controls>
-                                    <source src="Audio/Contra_J.G.B_-_Joaquin_Sabina [J9qX11ARyeE].mp3" type="audio/mpeg">
-                                </audio>
-                            </div>
-                        </div>
-                    </details>    
-                    
-                    <details>
-                        <summary>Infancia y confesion</summary>
-                        <div class="fondoAzul">
-                            <h5>A Juan Goytisolo</h5>
-                        <pre id="infancia"></pre>
-
-                    </details>        
-
-                    <details>
-                        <summary>No volveré a ser joven</summary>
-                        <div class="fondoAzul">
-                        <pre id="joven"></pre>
-
-                        <div class="alineadoAudio">
-                            <div class="marcoAudio">
-                                <b>Poema recitado:</b>
-                                <br>
-                                <b>Voz de Jaime Gil de Biedma</b>
-                                <br>
-                                <br>
-                                <audio controls>
-                                    <source src="Audio/Jaime_Gil_de_Biedma_No_volvere_a_ser_joven [Km5ONq9y-Z0].mp3" type="audio/mpeg">
-                                </audio>
-                            </div>
-                        </div>
-
-                        <div class="alineadoAudio">
-                            <div class="marcoAudio">
-                                <b>Cantautor/a:</b>
-                                <br>
-                                <b>Joan Manuel Serrat</b>
-                                <br>
-                                <br>
-                                <audio controls>
-                                    <source src="Audio/Joan_Manuel_Serrat_-_No_volvere_a_ser_joven_-_Poema_de_Jaime_Gil_de_Biedma [vAHF0ybLcOo].mp3" type="audio/mpeg">
-                                </audio>
-                            </div>
-                        </div>
-                    </details>        
-                </section>
-            </details>
-        </section>
+            </section>
+        </div>
     </body>
 </html>

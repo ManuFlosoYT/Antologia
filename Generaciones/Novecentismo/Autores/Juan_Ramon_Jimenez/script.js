@@ -21,6 +21,7 @@ fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
 
     document.getElementById('biografia2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
+
 fetch('Textos/biografia3.txt')
     .then(response => response.text())
     .then(text => 

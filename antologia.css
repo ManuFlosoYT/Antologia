@@ -21,13 +21,7 @@
     align-items: center;
 }
 
-body{
-    background-image: url("Imagenes/fondo.jpg");
-	width: 1300px;
-	background-size: cover; 
-    background-repeat: no-repeat;
-	margin-top: 120px;
-}
+
 
 div{
 	background-color: #00000000;
@@ -42,7 +36,13 @@ p{
 	text-align: justify;
 	text-justify: auto;
 }
-
+body{
+    background-image: url("Imagenes/fondo.jpg");
+	width: 1300px;
+	background-size: cover; 
+    background-repeat: no-repeat;
+	margin-top: 120px;
+}
 section{
 	background-color: #00000000;
 	display: flex;
@@ -810,4 +810,57 @@ h5{
 	/* Style the links as needed */
 	display: block; /* Ensure links take up full width */
 	margin-bottom: 5px; /* Add spacing between links */
+}
+
+
+
+
+
+
+
+/* POEMAS LARGOS */
+
+.fondo-poema-largo{
+	background-color: #d3d3d33e;
+	border-radius: 20px;
+	margin-top:10px;
+	margin-bottom:50px;
+}
+
+.body-poema-largo{
+    background-image: url("Imagenes/fondo.jpg");
+	width: 1750px;
+	background-size: cover; 
+    background-repeat: no-repeat;
+	margin-top: 120px;
+}
+
+.bloque-poema-largo{
+	align-items: center;
+	align-content: center;
+	margin: 100px;
+	margin-top:50px;
+	margin-bottom: 50px;
+	background-color: #FFFFFF7F;
+	border-color: #4c4c4c7f;
+	border-width: 8px;
+	border-style: solid;
+	border-radius: 5px;
+}
+
+
+.volver-poema-largo{
+	padding:0px;
+	margin-left: 150px;
+	margin-bottom:75px;
+    width: 1450px;
+	height:85px;
+    z-index: 100;
+
+
+	background-color: #ea899add;
+	border-radius: 5px;
+	border-color: #ff6088dd;
+	border-width: 4px;
+	border-style: solid;
 }

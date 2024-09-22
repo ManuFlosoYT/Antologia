@@ -1,9 +1,4 @@
-DAMASO ALONSO / LEOPOLDO MARIA PANERO
-
-Popup pantalla completa en poemas que se salen de la pantalla
-
-style="overflow-x: auto;"
-
-
-
 Si un poema tiene varios audios alinearlos horizontalmente
+
+
+gabriel celaya: biografia

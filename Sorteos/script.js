@@ -1,6 +1,6 @@
 function calcular() {
 
-  cortos = 
+  let cortos = 
   [
     "Caupolicán",
     "Lo fatal",
@@ -79,7 +79,7 @@ function calcular() {
     "Resumen"
   ];
 
-  medios = 
+  let medios = 
   [
     "Retrato",
     "Las moscas",
@@ -131,7 +131,7 @@ function calcular() {
     "Dedicatoria"
   ];
 
-  largos = 
+  let largos = 
   [
     "Sonatina",
     "Autumnal",
@@ -162,28 +162,165 @@ function calcular() {
     "La ausencia es una forma del invierno"
   ];
 
-  const numCasos = parseInt(document.getElementById("numCasos").value); // ENTRADA DE NUMERO DE CASOS 
-  
-  const largo = cortos.length + medios.length + largos.length; // Número total de elementos
-  const porCabeza = Math.floor(largo / numCasos);  // Número de elementos por caso
-
+  let numCasos = parseInt(document.getElementById("numCasos").value); // ENTRADA DE NUMERO DE CASOS 
 
   const tabla = document.getElementById("tablaResultados"); // Crear tabla de resultados
   tabla.innerHTML = "";  // Limpiar tabla
 
   const headerRow = tabla.insertRow(); // Crear fila de encabezado
-  headerRow.insertCell().textContent = "Caso"; // Encabezado de la columna de casos
-  headerRow.insertCell().textContent = "Elementos"; // Encabezado de la columna de elementos
+  headerRow.insertCell().textContent = "Nº Alummno"; // Encabezado de la columna de casos
+  headerRow.insertCell().textContent = "Poemas"; // Encabezado de la columna de elementos
 
-
-
-
-
-
-    
-  for(i = 0; i < numCasos; i++) { // Iterar sobre el número de casos
-    const row = tabla.insertRow(); // Crear fila
-    row.insertCell().textContent = i + 1; // Número de caso
-    row.insertCell().textContent = porCabeza; // Número de elementos
+  /* SOLO FUNCIONA ENTRE 27 Y 43 CASOS */
+  if(numCasos > 43) // Si el número de casos es mayor que el número de elementos
+  {
+    numCasos = 43; // Se establece el número de casos al número
   }
+  if(numCasos < 27) // Si el número de casos es mayor que el número de elementos
+  {
+    numCasos = 27; // Se establece el número de casos al número
+  }
+
+  for(i = 0; i < numCasos; i++) { 
+    // Iterar sobre el número de casos
+    
+    let poema = [];
+    let poemalargo = "";
+    let poemamedio = "";
+    let poemacorto = "";
+
+    if (i < 27) {
+      shuffleArray(largos);
+      poemalargo = largos.shift();
+      if(poemalargo == null){console.log("Poema largo nulo");}
+      poema.push(poemalargo);
+
+      shuffleArray(cortos);
+      poemacorto = cortos.shift();
+      if(poemacorto == null){console.log("Poema corto nulo");}
+      poema.push(poemacorto);
+
+      if(medios.lenth > (numCasos - 28) * 2)
+      {
+        shuffleArray(medios);
+        poemamedio = medios.shift();
+        if(poemamedio == null){console.log("Poema medio nulo");}
+        poema.push(poemamedio);
+      }
+      else
+      {
+        shuffleArray(cortos);
+        poemacorto = cortos.shift();
+        if(poemacorto == null){console.log("Poema corto nulo");}
+        poema.push(poemacorto);
+      }
+      
+    }
+    else{
+      shuffleArray(medios);
+      poemamedio = medios.shift();
+      if(poemamedio == null){console.log("Poema medio nulo");}
+      poema.push(poemamedio);
+
+      shuffleArray(medios);
+      poemamedio = medios.shift();
+      if(poemamedio == null){console.log("Poema medio nulo");}
+      poema.push(poemamedio);
+
+      if(cortos.lenth > 0)
+      {
+        shuffleArray(cortos);
+        poemacorto = cortos.shift();
+        if(poemacorto == null){console.log("Poema corto nulo");}
+        poema.push(poemacorto);
+      }
+      else
+      {
+        shuffleArray(medios);
+        poemamedio = medios.shift();
+        if(poemamedio == null){console.log("Poema medio nulo");}
+        poema.push(poemamedio);
+      }
+
+      
+      
+
+      shuffleArray(cortos);
+      poemacorto = cortos.shift();
+      if(poemacorto == null){console.log("Poema corto nulo");}
+      poema.push(poemacorto);
+    }
+
+    const row = tabla.insertRow(); // Crear fila
+
+
+    let poemastring = arrayToString(poema);
+
+    row.insertCell().textContent = poemastring; // Eliminar comas iniciales
+
+    console.log(poema.length);
+  }
+
+  //shuffleTableRows('tablaResultados'); // Mezclar las filas de la tabla
+
+  addCellToFirstColumn('tablaResultados', i); 
+
+  console.log("Poemas largo: " + largos.length);
+  console.log("Poemas medios: " + medios.length);
+  console.log("Poemas corto: " + cortos.length);
+
+}
+
+
+function shuffleArray(array) { 
+  for (let i = array.length - 1; i > 0; i--) { //Shuffle using the Fisher-Yates algorithm
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; 
+  }
+}
+
+function arrayToString(arr) {
+  arr.filter(item => item);
+  return arr.join(', '); 
+}
+
+
+function shuffleTableRows(tableId) {
+  const table = document.getElementById(tableId);
+  const tbody = table.querySelector('tbody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));  
+
+
+  // Extract the first row and store it separately
+  const firstRow = rows.shift();
+
+  // Shuffle the remaining rows (excluding the first one)  using the Fisher-Yates algorithm (similar to shuffleArray())
+  for (let i = rows.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [rows[i], rows[j]] = [rows[j], rows[i]];
+  }
+
+  // Clear the existing rows from the table body
+  tbody.innerHTML = '';
+
+  // Re-insert the first row, followed by the shuffled rows
+  tbody.appendChild(firstRow);
+  rows.forEach(row => tbody.appendChild(row));
+}
+
+function addCellToFirstColumn(tableId, int) {
+  const table = document.getElementById(tableId);
+  const rows = table.querySelectorAll('tr'); // Get all rows in the table
+
+  let a = 0;
+  let b = 1;
+  rows.forEach(row => {
+    if (a != 0){
+      const newCell = row.insertCell(0); // Insert a new cell at index 0 (first column)
+
+      // You can optionally add content to the new cell here
+      newCell.textContent = b++; // Increment the counter and display it in the new cell
+    }
+    a++;
+  });
 }

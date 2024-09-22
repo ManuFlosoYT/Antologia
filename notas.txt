@@ -1,3 +1,20 @@
 Si un poema tiene varios audios alinearlos horizontalmente
 
 gabriel celaya: biografia
+
+
+
+
+
+Asignar 1 largo a cada uno hasta que se agoten
+
+    Si tiene largo: asignar corto
+        Asignar medio
+
+    Si no tiene largo: asignar 2 medios
+        Asignar 2 cortos
+
+
+AHI TODOS LOS CASOS TIENEN 2 POEMAS ASIGNADOS
+
+

@@ -180,6 +180,9 @@ h5{
 	font-size: 26px;
 }
 
+footer {
+	background-color: #00000000; /* Ejemplo de estilo */
+}
 
 /* 
 	RECUADROS, BLOQUES Y CONTENEDORES
@@ -366,6 +369,22 @@ h5{
 	border-style: solid;
 	position: relative;
 	z-index: 5;
+}
+
+.titulo5{
+	align-items: center;
+	align-content: center;
+	margin: 5px;
+	margin-top:5px;
+	background-color: #daa520ff;
+	border-radius: 5px;
+	border-color: #705335;
+	border-width: 4px;
+	border-style: solid;
+	z-index: 10;
+	position: relative;
+	font-family: 'Roboto-Bold', sans-serif;
+	font-size: 30px;
 }
 
 .fondo-poema-largo{
@@ -783,4 +802,11 @@ h5{
     border-bottom: 5px solid #831314;
     padding-bottom: 2px;
     margin-bottom: 30px; 
+}
+
+.creditos{
+	font-size: 14pt;
+    font-family: 'Roboto-Bold', sans-serif;
+	text-align: center;
+	margin-top:-20px;
 }

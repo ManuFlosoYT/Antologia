@@ -564,6 +564,31 @@ footer {
 	width:1000px;
 }
 
+.listado-varios{
+	display: flex; /* Use flexbox for easy horizontal alignment */
+	align-items: center;
+
+	justify-content: left;
+	width:1000px;
+	margin:0px;
+}
+
+.enlace-listado-varios{
+	max-width: 75px; /* Adjust the image size as needed */
+	margin-right: 0px; /* Add some space between the image and text */
+	margin-left:40px;
+}
+
+.titulo-varios{
+	margin-left: 50px;
+}
+
+.youtube-varios{
+	max-width: 75px; /* Adjust the image size as needed */
+	margin-right: 20px; /* Add some space between the image and text */
+	margin-left:0px;
+}
+
 .youtube{
 	max-width: 75px; /* Adjust the image size as needed */
 	margin-right: 20px; /* Add some space between the image and text */
@@ -581,6 +606,17 @@ footer {
 	/* Style the links as needed */
 	display: block; /* Ensure links take up full width */
 	margin-bottom: 5px; /* Add spacing between links */
+}
+
+.varios-audios{
+	display: flex; /* Use flexbox for easy alignment */
+	flex-direction: row; /* Stack items vertically */
+	align-items: center; /* Align items to the left */
+	margin:15px;
+}
+
+.varios-audios2{
+	margin:auto;
 }
 
 /* 
@@ -809,4 +845,26 @@ footer {
     font-family: 'Roboto-Bold', sans-serif;
 	text-align: center;
 	margin-top:-20px;
+}
+
+/* SORTEOS */
+
+.sorteos-container {
+    width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+  
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+  
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }

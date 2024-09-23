@@ -5,7 +5,8 @@
       <link rel="stylesheet" href="../antologia.css">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <link rel="icon" type="image/x-icon" href="../favicon.ico">
-      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
     </head>
 
 
@@ -14,12 +15,14 @@
     <div class="fondo">
       <div class="sorteos-container">
         <h1>Calculadora de Listas</h1>
-        <label for="numCasos">(Rango 27-43) Número de casos: </label>
-        <input type="number" id="numCasos" min="27" max="43" value="1">
-
+        <label for="repartir">Repartir poemas sobrantes: </label>
+        <input type="checkbox" id="repartir">
+        <label for="numCasos">(Rango 1-43) Número de casos: </label>
+        <input type="number" id="numCasos" min="1" max="43" value="1">
         <button onclick="calcular()">Calcular</button>
+        <button onclick="downloadDownloadableElements()">Descargar tabla</button>
 
-        <table id="tablaResultados"></table> 
+        <table id="tablaResultados" class="downloadable"></table> 
       </div>
     </div>
     

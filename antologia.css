@@ -856,15 +856,15 @@ footer {
     padding: 20px;
 }
   
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
   
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+table {
+	width: 100%;
+    border-collapse: collapse; /* Merge adjacent borders into single lines */
+	margin-top: 20px;
+}
+
+td, th {
+    border: 1px solid black; /* Add a 1px black border to all cells */
+    padding: 5px; /* Add some padding for better visual separation */
+	text-align: left;
 }

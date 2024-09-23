@@ -8,13 +8,19 @@ fetch('Textos/biografia.txt')
     }
 ).catch(error => console.error('Error fetching file:', error));
 
-fetch('Textos/biografia2.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('biografia2').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
+fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(mujeres de la Generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Irremediablemente|Cielo nocturno|Los juegos de la edad tardía|Todo más claro y otros poemas)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('biografia2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/biografia3.txt')
     .then(response => response.text())
@@ -27,21 +33,33 @@ fetch('Textos/biografia3.txt')
 
 //Los libros de Fausto
 
-fetch('Textos/fausto.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('fausto').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
+fetch('Textos/fausto.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(mujeres de la Generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Los libros de Fausto|La destrucción o el amor|Sombra del paraíso|Todo más claro y otros poemas)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
-fetch('Textos/fausto2.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('fausto2').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('fausto').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
+
+fetch('Textos/fausto2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(mujeres de la Generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Los libros de Fausto|La destrucción o el amor|Sombra del paraíso|Todo más claro y otros poemas)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('fausto2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/pared.txt')
     .then(response => response.text())
@@ -53,21 +71,33 @@ fetch('Textos/pared.txt')
 
 //Cántico inútil
 
-fetch('Textos/cantico.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('cantico').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
+fetch('Textos/cantico.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(mujeres de la Generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Cántico inútil|La destrucción o el amor|Sombra del paraíso|Todo más claro y otros poemas)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
-fetch('Textos/cantico2.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('cantico2').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('cantico').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
+
+fetch('Textos/cantico2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(mujeres de la Generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Cántico inútil|La destrucción o el amor|Sombra del paraíso|Todo más claro y otros poemas)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('cantico2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/ambicion.txt')
     .then(response => response.text())

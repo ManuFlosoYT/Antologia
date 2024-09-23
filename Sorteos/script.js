@@ -168,107 +168,97 @@ function calcular() {
   tabla.innerHTML = "";  // Limpiar tabla
 
   const headerRow = tabla.insertRow(); // Crear fila de encabezado
-  headerRow.insertCell().textContent = "Nº Alummno"; // Encabezado de la columna de casos
-  headerRow.insertCell().textContent = "Poemas"; // Encabezado de la columna de elementos
+  headerRow.insertCell().textContent = "Nº Alummno";
+  headerRow.insertCell().textContent = "Poemas";
 
-  /* SOLO FUNCIONA ENTRE 27 Y 43 CASOS */
-  if(numCasos > 43) // Si el número de casos es mayor que el número de elementos
+  const checkbox = document.getElementById('repartir');
+  const isChecked = checkbox.checked; 
+
+  if(numCasos > 43)
   {
-    numCasos = 43; // Se establece el número de casos al número
-  }
-  if(numCasos < 27) // Si el número de casos es mayor que el número de elementos
-  {
-    numCasos = 27; // Se establece el número de casos al número
+    numCasos = 43;
   }
 
-  for(i = 0; i < numCasos; i++) { 
-    // Iterar sobre el número de casos
-    
+
+  for (i = 0; i < numCasos; i++) {
     let poema = [];
-    let poemalargo = "";
-    let poemamedio = "";
-    let poemacorto = "";
 
-    if (i < 27) {
+    // Asignar un poema largo si hay suficientes y el número de caso lo permite
+    if (largos.length > 0) {
       shuffleArray(largos);
-      poemalargo = largos.shift();
-      if(poemalargo == null){console.log("Poema largo nulo");}
-      poema.push(poemalargo);
-
-      shuffleArray(cortos);
-      poemacorto = cortos.shift();
-      if(poemacorto == null){console.log("Poema corto nulo");}
-      poema.push(poemacorto);
-
-      if(medios.lenth > (numCasos - 28) * 2)
-      {
-        shuffleArray(medios);
-        poemamedio = medios.shift();
-        if(poemamedio == null){console.log("Poema medio nulo");}
-        poema.push(poemamedio);
-      }
-      else
-      {
-        shuffleArray(cortos);
-        poemacorto = cortos.shift();
-        if(poemacorto == null){console.log("Poema corto nulo");}
-        poema.push(poemacorto);
-      }
-      
+      poema.push(largos.shift());
     }
-    else{
-      shuffleArray(medios);
-      poemamedio = medios.shift();
-      if(poemamedio == null){console.log("Poema medio nulo");}
-      poema.push(poemamedio);
 
-      shuffleArray(medios);
-      poemamedio = medios.shift();
-      if(poemamedio == null){console.log("Poema medio nulo");}
-      poema.push(poemamedio);
-
-      if(cortos.lenth > 0)
-      {
-        shuffleArray(cortos);
-        poemacorto = cortos.shift();
-        if(poemacorto == null){console.log("Poema corto nulo");}
-        poema.push(poemacorto);
-      }
-      else
-      {
+    // Asignar poemas medios o cortos hasta completar los 3 poemas requeridos
+    while (poema.length < 3) {
+      if (medios.length > 0) {
         shuffleArray(medios);
-        poemamedio = medios.shift();
-        if(poemamedio == null){console.log("Poema medio nulo");}
-        poema.push(poemamedio);
+        poema.push(medios.shift());
+      } else if (cortos.length > 0) {
+        shuffleArray(cortos);
+        poema.push(cortos.shift());
+      } else {
+        // En caso de que se agoten todos los poemas, salir del bucle
+        break;
       }
-
-      
-      
-
-      shuffleArray(cortos);
-      poemacorto = cortos.shift();
-      if(poemacorto == null){console.log("Poema corto nulo");}
-      poema.push(poemacorto);
     }
 
     const row = tabla.insertRow(); // Crear fila
-
 
     let poemastring = arrayToString(poema);
 
     row.insertCell().textContent = poemastring; // Eliminar comas iniciales
 
-    console.log(poema.length);
+    //console.log(poema.length);
   }
 
-  //shuffleTableRows('tablaResultados'); // Mezclar las filas de la tabla
+  let num = largos.length + medios.length + cortos.length;
+
+  shuffleTableRows('tablaResultados'); // Mezclar las filas de la tabla
 
   addCellToFirstColumn('tablaResultados', i); 
 
-  console.log("Poemas largo: " + largos.length);
+/*   console.log("Poemas largo: " + largos.length);
   console.log("Poemas medios: " + medios.length);
-  console.log("Poemas corto: " + cortos.length);
+  console.log("Poemas corto: " + cortos.length); */
 
+  if(isChecked)
+  {
+    const rows = document.querySelectorAll('table tr');
+    let combinedList = [];
+
+    combinedList = combinedList.concat(largos); 
+    combinedList = combinedList.concat(medios); 
+    combinedList = combinedList.concat(cortos); 
+
+    while (combinedList.length > 0)
+    {
+      rows.forEach(row => {
+        if(row.rowIndex != 0){
+          const cells = row.querySelectorAll('td');
+        const cell = cells[1];
+        let poema2 = [];
+
+        if (combinedList.length > 0) {
+          shuffleArray(combinedList);
+          let temp = combinedList[0];
+          combinedList.splice(0, 1);
+          poema2.push(temp);
+        }
+
+        let poemastring2 = arrayToString(poema2);
+        cellText = "," + " " + poemastring2;
+        removeLeadingTrash(cellText);
+        cell.textContent += cellText;
+        }
+      });
+    }
+  }
+  else{
+    const footerRow = tabla.insertRow(); // Crear fila de encabezado
+    footerRow.insertCell().textContent = "Poemas restantes:" + num;
+    footerRow.insertCell().textContent = largos + medios + cortos;
+  }
 }
 
 
@@ -284,6 +274,9 @@ function arrayToString(arr) {
   return arr.join(', '); 
 }
 
+function removeLeadingTrash(str) {
+  return str.replace(/, $/,""); 
+}
 
 function shuffleTableRows(tableId) {
   const table = document.getElementById(tableId);
@@ -323,4 +316,27 @@ function addCellToFirstColumn(tableId, int) {
     }
     a++;
   });
+}
+
+function downloadDownloadableElements() {
+  const downloadableElements = document.querySelectorAll('.downloadable');
+
+  if (downloadableElements.length === 0) {
+    console.warn('No elements with class "downloadable" found.');
+    return; 
+  }
+
+  const html = Array.from(downloadableElements)
+    .map(element => element.outerHTML)
+    .join('\n'); 
+
+  const blob = new Blob([html], { type: 'text/html' });
+  const url = window.URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'tablaResultados.html'; 
+  document.body.appendChild(a);
+  a.click();
+  window.URL.revokeObjectURL(url);
 }

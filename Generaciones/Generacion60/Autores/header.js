@@ -21,7 +21,7 @@ function createHeader() {
                         <a href="../../Generacion60.html">
                             <div class="fondo-header-volver">
                                 <div class="image-header">
-                                    <img src="../../../../Imagenes/Header/volver.png">
+                                    <img src="../../../../Imagenes/Header/volver.webp">
                                 </div>
                                 <h2>Volver atrás</h2>
                             </div>
@@ -55,7 +55,7 @@ function createHeader() {
             <a href="#" >
                 <div class="fondo-header-subir">
                     <div class="image-header">
-                        <img src="../../../../Imagenes/Header/subir.png">
+                        <img src="../../../../Imagenes/Header/subir.webp">
                     </div>
                     <h2>Subir</h2>
                 </div>

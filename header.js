@@ -21,7 +21,7 @@ function createHeader() {
                         <a href="Antología de poesía del siglo XX.pdf" download>
                             <div class="fondo-header-descarga">
                                 <div class="image-header">
-                                    <img src="Imagenes/Header/descarga.png">
+                                    <img src="Imagenes/Header/descarga.webp">
                                 </div>
                                 <h2>Descargar PDF</h2>
                             </div>
@@ -45,7 +45,7 @@ function createHeader() {
             <a href="#" >
                 <div class="fondo-header-subir">
                     <div class="image-header">
-                        <img src="Imagenes/Header/subir.png">
+                        <img src="Imagenes/Header/subir.webp">
                     </div>
                     <h2>Subir</h2>
                 </div>

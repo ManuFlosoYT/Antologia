@@ -45,7 +45,7 @@ function createHeader() {
             <a href="#" >
                 <div class="fondo-header-subir">
                     <div class="image-header">
-                        <img src="../../Imagenes/Header/subir.png">
+                        <img src="../../Imagenes/Header/subir.webp">
                     </div>
                     <h2>Subir</h2>
                 </div>

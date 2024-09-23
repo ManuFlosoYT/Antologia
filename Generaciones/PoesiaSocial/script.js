@@ -15,7 +15,7 @@ fetch('Textos/parrafo.txt') //CAMBIAR ESTO PARA CONFIGURAR
 fetch('Textos/parrafo2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
-    const frasesEnNegrita = /(JOSÉ HIERRO|GABRIEL CELAYA|Cantos iberos|Pido la paz y la palabra|BLAS|DE| OTERO)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnNegrita = /(JOSÉ HIERRO|GABRIEL CELAYA|Cantos iberos|Pido la paz y la palabra|BLAS|DE OTERO)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesEnCursiva = /(Cantos iberos|Pido la paz y la palabra)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 

@@ -312,3 +312,19 @@ fetch('Textos/Cancionero y romancero de ausencias/conformo.txt')
         document.getElementById('conformo').textContent = text;
     }
 ).catch(error => console.error('Error fetching file:', error));
+
+fetch('Textos/misc.txt')
+    .then(response => response.text())
+    .then(text => 
+    {
+        document.getElementById('misc').textContent = text;
+    }
+).catch(error => console.error('Error fetching file:', error));
+
+fetch('Textos/misc2.txt')
+    .then(response => response.text())
+    .then(text => 
+    {
+        document.getElementById('misc2').textContent = text;
+    }
+).catch(error => console.error('Error fetching file:', error));

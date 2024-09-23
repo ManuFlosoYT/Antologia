@@ -79,24 +79,6 @@ fetch('Textos/noche.txt')
 ).catch(error => console.error('Error fetching file:', error));
 
 
-//A veces gran amor
-
-fetch('Textos/veces.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('veces').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
-
-fetch('Textos/veces2.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('veces2').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
-
 fetch('Textos/pajaros.txt')
     .then(response => response.text())
     .then(text => 

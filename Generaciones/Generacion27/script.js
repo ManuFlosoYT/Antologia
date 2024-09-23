@@ -393,8 +393,8 @@ fetch('Textos/parrafo28.txt') //CAMBIAR ESTO PARA CONFIGURAR
 fetch('Textos/parrafo29.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
-    const frasesEnNegrita = /(POESÍA DESARRAIGADA:|desarraigo|interior|exterior|Rafael Alberti|Entre el clavel y la espada|Pedro Salinas|Todo más claro|Jorge Guilén|Clamor|desazón existencial|Dámaso Alonso|Hijos de la ira|Aleixandre|Sombra del paraíso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Entre el clavel y la espada|Todo más claro|Clamor|Hijos de la ira|Sombra del paraíso)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnNegrita = /(POESÍA DESARRAIGADA:|desarraigo|interior|exterior|Rafael Alberti|Entre el clavel y la espada|Pedro Salinas|Todo más claro|Jorge Guilén|Clamor|desazón existencial|Dámaso Alonso|Hijos de la ira|Aleixandre|Sombra del paraíso|Maremagnum)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Entre el clavel y la espada|Todo más claro|Clamor|Hijos de la ira|Sombra del paraíso|Maremagnum)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
     const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 

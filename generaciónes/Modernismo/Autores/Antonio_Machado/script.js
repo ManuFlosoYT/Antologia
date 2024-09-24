@@ -69,3 +69,18 @@ fetch('Textos/recuerdo.txt')
     }
 ).catch(error => console.error('Error fetching file:', error));
 
+fetch('Textos/ocaso.txt')
+    .then(response => response.text())
+    .then(text => 
+    {
+        document.getElementById('ocaso').textContent = text;
+    }
+).catch(error => console.error('Error fetching file:', error));
+
+fetch('Textos/moscas.txt')
+    .then(response => response.text())
+    .then(text => 
+    {
+        document.getElementById('moscas').textContent = text;
+    }
+).catch(error => console.error('Error fetching file:', error));

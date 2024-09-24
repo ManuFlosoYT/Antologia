@@ -14,15 +14,30 @@
     <script src="header.js" async></script> 
     <div class="fondo">
       <div class="sorteos-container">
-        <h1>Calculadora de Listas</h1>
-        <label for="repartir">Repartir poemas sobrantes: </label>
-        <input type="checkbox" id="repartir">
-        <label for="numCasos">(Rango 1-43) Número de casos: </label>
-        <input type="number" id="numCasos" min="1" max="43" value="1">
-        <button onclick="calcular()">Calcular</button>
-        <button id="downloadDOCX">Descargar DOCX</button>
 
-        <table id="tablaResultados" class="downloadable"></table> 
+        <div class="titulo">
+          <h1>Calculadora de Listas</h1>
+        </div>
+
+        <div class="bloque">
+          
+          <label for="repartir" class="titulo-sorteos">Repartir poemas sobrantes: </label>
+          <input type="checkbox" id="repartir">
+
+          <br>
+
+          <label for="numCasos" class="titulo-sorteos">(Rango 1-43) Número de casos: </label>
+          <input type="number" id="numCasos" min="1" max="43" value="1" class="texto-sorteos">
+
+          <br>
+
+          <button onclick="calcular()" class="texto-sorteos">Calcular</button>
+          <button id="downloadDOCX" class="texto-sorteos">Descargar DOCX</button>
+        </div>
+        
+        <div class="line2"></div>
+
+        <table id="tablaResultados" class="texto-sorteos"></table> 
       </div>
     </div>
     

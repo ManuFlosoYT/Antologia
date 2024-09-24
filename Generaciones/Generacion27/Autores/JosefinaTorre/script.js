@@ -11,7 +11,7 @@ fetch('Textos/biografia.txt')
 fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
-    const frasesEnNegrita = /(mujeres de la Generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnNegrita = /(mujeres de la Generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesEnCursiva = /(Poemas de la noche|La voz en el viento|Mi nombre es un río|Yerma|La casa de Bernarda Alba)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 

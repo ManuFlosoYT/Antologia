@@ -51,7 +51,7 @@ fetch('Textos/ira2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(mujeres de la Generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Ida y vuelta|Memorias de Leticia Valle|La sin razón|Yerma|La casa de Bernarda Alba)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Hijos de la ira|Memorias de Leticia Valle|La sin razón|Yerma|La casa de Bernarda Alba)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
     const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
@@ -83,7 +83,7 @@ fetch('Textos/hombre.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(mujeres de la Generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Ida y vuelta|Memorias de Leticia Valle|La sin razón|Yerma|La casa de Bernarda Alba)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Hombre y Dios|Memorias de Leticia Valle|La sin razón|Yerma|La casa de Bernarda Alba)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
     const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
@@ -97,7 +97,7 @@ fetch('Textos/hombre2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(mujeres de la Generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
-    const frasesEnCursiva = /(Hijos de la ira|Memorias de Leticia Valle|La sin razón|Yerma|La casa de Bernarda Alba)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Hombre y Dios|Memorias de Leticia Valle|La sin razón|Yerma|La casa de Bernarda Alba)/gi; //CAMBIAR ESTO PARA CONFIGURAR
     const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
     const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 

@@ -96,7 +96,7 @@ fetch('Textos/inmortalidad.txt')
 
 //Habitaciones separadas
 
-fetch('Textos/habitaciones.txt') //CAMBIAR ESTO PARA CONFIGURAR
+fetch('Textos/Habitaciones.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(mujeres de la generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
@@ -107,10 +107,10 @@ fetch('Textos/habitaciones.txt') //CAMBIAR ESTO PARA CONFIGURAR
     const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
     const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
 
-    document.getElementById('habitaciones').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+    document.getElementById('Habitaciones').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
 
-fetch('Textos/habitaciones2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+fetch('Textos/Habitaciones2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(mujeres de la generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
@@ -121,7 +121,7 @@ fetch('Textos/habitaciones2.txt') //CAMBIAR ESTO PARA CONFIGURAR
     const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
     const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
 
-    document.getElementById('habitaciones2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+    document.getElementById('Habitaciones2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/Dedicatoria.txt')

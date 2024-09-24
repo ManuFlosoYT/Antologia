@@ -8,13 +8,19 @@ fetch('Textos/biografia.txt')
     }
 ).catch(error => console.error('Error fetching file:', error));
 
-fetch('Textos/biografia2.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('biografia2').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
+fetch('Textos/biografia2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(mujeres de la generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Y ahora ya soy dueño de este paraíso|Habitaciones separadas|Mañana no será lo que Dios quiera|Bajo tolerancia|Final de un adiós)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('biografia2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/biografia3.txt')
     .then(response => response.text())
@@ -27,21 +33,33 @@ fetch('Textos/biografia3.txt')
 
 //Completamente Viernes
 
-fetch('Textos/viernes.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('viernes').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
+fetch('Textos/viernes.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(mujeres de la generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Completamente viernes|Páginas de un diario|Las cosas como fueron|Bajo tolerancia|Final de un adiós)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
-fetch('Textos/viernes2.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('viernes2').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('viernes').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
+
+fetch('Textos/viernes2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(mujeres de la generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Completamente viernes|Páginas de un diario|Las cosas como fueron|Bajo tolerancia|Final de un adiós)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('viernes2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/Completamente.txt')
     .then(response => response.text())
@@ -78,21 +96,33 @@ fetch('Textos/inmortalidad.txt')
 
 //Habitaciones separadas
 
-fetch('Textos/Habitaciones.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('Habitaciones').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
+fetch('Textos/habitaciones.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(mujeres de la generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Habitaciones separadas|Páginas de un diario|Las cosas como fueron|Bajo tolerancia|Final de un adiós)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
 
-fetch('Textos/Habitaciones2.txt')
-    .then(response => response.text())
-    .then(text => 
-    {
-        document.getElementById('Habitaciones2').textContent = text;
-    }
-).catch(error => console.error('Error fetching file:', error));
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('habitaciones').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
+
+fetch('Textos/habitaciones2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(mujeres de la generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Habitaciones separadas|Páginas de un diario|Las cosas como fueron|Bajo tolerancia|Final de un adiós)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(texto a subrayar|otro texto)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('habitaciones2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/Dedicatoria.txt')
     .then(response => response.text())

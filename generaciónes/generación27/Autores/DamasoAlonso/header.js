@@ -11,7 +11,7 @@ function createHeader() {
                         <a href="../../../../../index.html">
                             <div class="fondo-header-inicio">
                                 <div class="image-header">
-                                    <img src="../../../../../Imagenes/Header/home.webp">
+                                    <img src="../../../../Imagenes/Header/home.webp">
                                 </div>
                                 <h2>Inicio</h2>
                             </div>
@@ -21,7 +21,7 @@ function createHeader() {
                         <a href="DamasoAlonso.html">
                             <div class="fondo-header-volver">
                                 <div class="image-header">
-                                    <img src="../../../../../Imagenes/Header/volver.webp">
+                                    <img src="../../../../Imagenes/Header/volver.webp">
                                 </div>
                                 <h2>Volver atrás</h2>
                             </div>
@@ -31,7 +31,7 @@ function createHeader() {
                         <a href="../../../../../Listado.html">
                             <div class="fondo-header-listado">
                                 <div class="image-header">
-                                    <img src="../../../../../Imagenes/Header/pergamino.webp">
+                                    <img src="../../../../Imagenes/Header/pergamino.webp">
                                 </div>
                                 <h2>Listado de poemas</h2>
                             </div>
@@ -41,7 +41,7 @@ function createHeader() {
                         <a href="../../../../../Sorteos/Sorteos.html">
                             <div class="fondo-header-sorteos">
                                 <div class="image-header">
-                                    <img src="../../../../../Imagenes/Header/dados.webp">
+                                    <img src="../../../../Imagenes/Header/dados.webp">
                                 </div>
                                 <h2>Sorteos</h2>
                             </div>

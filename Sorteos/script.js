@@ -174,12 +174,13 @@ function calcular() {
   const checkbox = document.getElementById('repartir');
   const isChecked = checkbox.checked; 
 
+  // Limitar el número de casos a 43 (Parece ser que funciona hasta 50, pero por si acaso 43 no da error)
   if(numCasos > 43)
   {
     numCasos = 43;
   }
 
-
+  //Reparto poemas
   for (i = 0; i < numCasos; i++) {
     let poema = [];
 
@@ -218,10 +219,7 @@ function calcular() {
 
   addCellToFirstColumn('tablaResultados', i); 
 
-/*   console.log("Poemas largo: " + largos.length);
-  console.log("Poemas medios: " + medios.length);
-  console.log("Poemas corto: " + cortos.length); */
-
+  // Mostrar el número de poemas restantes en el pie de la tabla o repartirlos
   if(isChecked)
   {
     const rows = document.querySelectorAll('table tr');
@@ -236,31 +234,52 @@ function calcular() {
       rows.forEach(row => {
         if(row.rowIndex != 0){
           const cells = row.querySelectorAll('td');
-        const cell = cells[1];
-        let poema2 = [];
+          const cell = cells[1];
+          let poema2 = [];
+        
+          if (combinedList.length > 0) {
+            shuffleArray(combinedList);
+            let temp = combinedList[0];
+            combinedList.splice(0, 1);
+            poema2.push(temp);
+          }
 
-        if (combinedList.length > 0) {
-          shuffleArray(combinedList);
-          let temp = combinedList[0];
-          combinedList.splice(0, 1);
-          poema2.push(temp);
-        }
-
-        let poemastring2 = arrayToString(poema2);
-        cellText = "," + " " + poemastring2;
-        removeLeadingTrash(cellText);
-        cell.textContent += cellText;
+          let poemastring2 = arrayToString(poema2);
+          cellText = ":ñ:" + poemastring2;
+          removeLeadingTrash(cellText);
+          cell.textContent += cellText;
         }
       });
     }
   }
   else{
     const footerRow = tabla.insertRow(); // Crear fila de encabezado
-    footerRow.insertCell().textContent = "Poemas restantes:" + num;
-    footerRow.insertCell().textContent = largos + medios + cortos;
-  }
-}
+    footerRow.insertCell().textContent = "Poemas restantes:";
 
+    let lista3 = [];
+
+    for(k = 0; k < largos.length; k++)
+    {
+      lista3.push(largos.shift());
+    }
+
+    for(l = 0; l < medios.length; l++)
+    {
+      lista3.push(medios.shift());
+    }
+
+    for(m = 0; m < cortos.length; m++)
+    {
+      lista3.push(cortos.shift());
+    }
+
+    let lista3String = arrayToString(lista3);
+
+    footerRow.insertCell().textContent = lista3String;
+  }
+
+  addLineBreaksToAllCells();
+}
 
 function shuffleArray(array) { 
   for (let i = array.length - 1; i > 0; i--) { //Shuffle using the Fisher-Yates algorithm
@@ -271,7 +290,19 @@ function shuffleArray(array) {
 
 function arrayToString(arr) {
   arr.filter(item => item);
-  return arr.join(', '); 
+  return arr.join(':ñ:');
+}
+
+function addLineBreaksToAllCells() {
+  let tableCells = document.querySelectorAll("td"); // Select all <td> elements
+
+  tableCells.forEach(cell => {
+    addLineBreaksToTableCell(cell);
+  });
+}
+
+function addLineBreaksToTableCell(cell) {
+  cell.innerHTML = cell.innerHTML.replace(/:ñ:/g, "<br>");
 }
 
 function removeLeadingTrash(str) {
@@ -316,27 +347,4 @@ function addCellToFirstColumn(tableId, int) {
     }
     a++;
   });
-}
-
-function downloadDownloadableElements() {
-  const downloadableElements = document.querySelectorAll('.downloadable');
-
-  if (downloadableElements.length === 0) {
-    console.warn('No elements with class "downloadable" found.');
-    return; 
-  }
-
-  const html = Array.from(downloadableElements)
-    .map(element => element.outerHTML)
-    .join('\n'); 
-
-  const blob = new Blob([html], { type: 'text/html' });
-  const url = window.URL.createObjectURL(blob);
-
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'tablaResultados.html'; 
-  document.body.appendChild(a);
-  a.click();
-  window.URL.revokeObjectURL(url);
 }

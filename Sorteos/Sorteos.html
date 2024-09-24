@@ -5,8 +5,8 @@
       <link rel="stylesheet" href="../antologia.css">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <link rel="icon" type="image/x-icon" href="../favicon.ico">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+      <script src="https://unpkg.com/docx@7.1.0/build/index.js"></script>
+
     </head>
 
 
@@ -20,12 +20,71 @@
         <label for="numCasos">(Rango 1-43) Número de casos: </label>
         <input type="number" id="numCasos" min="1" max="43" value="1">
         <button onclick="calcular()">Calcular</button>
-        <button onclick="downloadDownloadableElements()">Descargar tabla</button>
+        <button id="downloadDOCX">Descargar DOCX</button>
 
         <table id="tablaResultados" class="downloadable"></table> 
       </div>
     </div>
     
     <script src="script.js"></script>
+
+    <!-- DESCARGAR ARCHIVO -->
+    <script>
+      const downloadDOCXButton = document.getElementById('downloadDOCX');
+      downloadDOCXButton.addEventListener('click', () => {
+        const table = document.querySelector('table');
+
+        const tableRows = Array.from(table.querySelectorAll('tr'));
+        const docxTableRows = tableRows.map(row => {
+          const cells = Array.from(row.querySelectorAll('th, td'));
+          return new docx.TableRow({
+            children: cells.map(cell => {
+              // Split cell content by <br> tags
+              const cellContentParts = cell.innerHTML.split('<br>');
+
+              // Create paragraphs for each part, adding line breaks
+              const cellParagraphs = cellContentParts.map(part => 
+                new docx.Paragraph({ 
+                  text: part.trim(), // Remove extra whitespace
+                  break: true // Add a line break after each paragraph
+                })
+              );
+
+              return new docx.TableCell({
+                children: cellParagraphs
+              });
+            })
+          });
+        });
+      
+        const doc = new docx.Document({
+          sections: [{
+            children: [
+              new docx.Table({
+                rows: docxTableRows
+              })
+            ]
+          }]
+        });
+      
+        docx.Packer.toBlob(doc).then(blob => {
+          const opcionesFecha = { year: 'numeric', month: '2-digit', day: '2-digit' };
+          const fechaActual = new Date().toLocaleDateString('es-ES', opcionesFecha);
+
+          const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+          const horaActual = new Date().toLocaleTimeString('es-ES', opcionesHora);
+
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+
+          a.href = url;
+          a.download = 'reparto de poemas - ' + fechaActual + ' - ' + horaActual +'.docx';
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
+          a.remove();
+        });
+      });
+    </script>
   </body>
 </html>

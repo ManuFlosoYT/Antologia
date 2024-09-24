@@ -99,6 +99,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+	height: 105px;
     z-index: 100;
 
 	border-color: rgb(0, 0, 0);
@@ -125,10 +126,12 @@ nav li {
 	text-align: left;
 }
 
-nav li:last-child { /* Selecciona el último elemento de la lista */
-    float: right; /* Lo alinea a la derecha */
-    margin-right: 0; /* Elimina el margen derecho del último elemento */
+/* 
+nav li:last-child { /* Selecciona el último elemento de la lista
+    float: right; /* Lo alinea a la derecha
+    margin-right: 2000; /* Elimina el margen derecho del último elemento 
 }
+*/
 
 nav a {
     text-decoration: none;
@@ -741,7 +744,33 @@ footer {
 	border-style: solid;
 }
 
-#miDiv {
+.image-header-logo {
+    width: 90px; /* Set desired container size */
+    height: 90px;
+	border-radius: 5px;
+    background-color: #00000000;
+}
+
+.image-control {
+    width: 50px; /* Set desired container size */
+    height: 50px;
+	border-radius: 5px;
+    background-color: #00000000;
+}
+
+
+.botonesAbajo{
+	background-color: #00000000;
+	display: flex;
+    flex-direction: row;
+    padding: 70px;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    gap: 20px; 
+}
+
+#botonFlotanteSubir {
     position: fixed; /* Lo mantenemos fijo en la ventana */
     bottom: 20px; /* Distancia desde abajo */
     left: 20px; /* Distancia desde la izquierda */
@@ -751,7 +780,35 @@ footer {
     padding: 10px; /* Espacio interno */
 }
 
+#botonFlotanteLogo {
+    position: fixed; /* Lo mantenemos fijo en la ventana */
+    top: -3px; /* Distancia desde abajo */
+    right: 20px; /* Distancia desde la izquierda */
+    width: 100px; /* Ancho del div */
+    height: 100px; /* Alto del div */
+    background-color: #00000000; /* Color de fondo */
+    padding: 10px; /* Espacio interno */
+}
 
+#botonFlotanteSiguiente {
+    position: fixed; /* Lo mantenemos fijo en la ventana */
+    bottom: -40px; /* Distancia desde abajo */
+    right: -20px; /* Distancia desde la izquierda */
+    width: 100px; /* Ancho del div */
+    height: 100px; /* Alto del div */
+    background-color: #00000000; /* Color de fondo */
+    padding: 10px; /* Espacio interno */
+}
+
+#botonFlotanteAnterior {
+    position: fixed; /* Lo mantenemos fijo en la ventana */
+    bottom: -40px; /* Distancia desde abajo */
+    right: 40px; /* Distancia desde la izquierda */
+    width: 100px; /* Ancho del div */
+    height: 100px; /* Alto del div */
+    background-color: #00000000; /* Color de fondo */
+    padding: 10px; /* Espacio interno */
+}
 /* 
 	CONFIGURACIONES DE TEXTO
 */

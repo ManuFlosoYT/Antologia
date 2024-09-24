@@ -41,7 +41,7 @@ function createHeader() {
             </nav>
         </div> 
 
-        <div id="miDiv">
+        <div id="botonFlotanteSubir">
             <a href="#" >
                 <div class="fondo-header-subir">
                     <div class="image-header">
@@ -49,6 +49,12 @@ function createHeader() {
                     </div>
                     <h2>Subir</h2>
                 </div>
+            </a>
+        </div>
+
+        <div id="botonFlotanteLogo">
+            <a href="https://www.iax.es/" >
+                <img src="Imagenes/Header/logo-iax.webp" class="image-header-logo">
             </a>
         </div>
     `;

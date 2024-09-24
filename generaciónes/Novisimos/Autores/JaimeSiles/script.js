@@ -33,7 +33,7 @@ fetch('Textos/biografia3.txt')
 
 //Semáforos, semáforos
 
-fetch('Textos/Semaforo.txt') //CAMBIAR ESTO PARA CONFIGURAR
+fetch('Textos/Semaforos.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(mujeres de la generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
@@ -44,10 +44,10 @@ fetch('Textos/Semaforo.txt') //CAMBIAR ESTO PARA CONFIGURAR
     const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
     const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
 
-    document.getElementById('Semaforo').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+    document.getElementById('Semaforos').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
 
-fetch('Textos/Semaforo2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+fetch('Textos/Semaforos2.txt') //CAMBIAR ESTO PARA CONFIGURAR
   .then(response => response.text())
   .then(texto => {
     const frasesEnNegrita = /(mujeres de la generación del 27|(las Sinsombrero)|Maruja Mallo|Marga Gil-Roësset|María Zambrano|María Teresa León|Josefina de la Torre|Rosa Chacel|Ernestina de Champourcín o Concha Méndez)/gi; //CAMBIAR ESTO PARA CONFIGURAR
@@ -58,7 +58,7 @@ fetch('Textos/Semaforo2.txt') //CAMBIAR ESTO PARA CONFIGURAR
     const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
     const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
 
-    document.getElementById('Semaforo2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+    document.getElementById('Semaforos2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/acil.txt')

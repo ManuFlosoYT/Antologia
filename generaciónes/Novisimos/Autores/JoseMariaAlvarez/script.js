@@ -58,7 +58,7 @@ fetch('Textos/cera2.txt') //CAMBIAR ESTO PARA CONFIGURAR
     const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
     const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
 
-    document.getElementById('biografia2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+    document.getElementById('cera2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
 }).catch(error => console.error('Error al cargar el archivo:', error));
 
 fetch('Textos/piedra.txt')

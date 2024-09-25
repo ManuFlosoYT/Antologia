@@ -168,7 +168,7 @@ function calcular() {
   tabla.innerHTML = "";  // Limpiar tabla
 
   const headerRow = tabla.insertRow(); // Crear fila de encabezado
-  headerRow.insertCell().textContent = "Nº Alummno";
+  headerRow.insertCell().textContent = "Nº Alumno";
   headerRow.insertCell().textContent = "Poemas";
 
   const checkbox = document.getElementById('repartir');

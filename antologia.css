@@ -772,6 +772,21 @@ footer {
 	border-style: solid;
 }
 
+.fondo-header-bajar{
+	padding:0px;
+	background-color: #95959541;
+	margin-top:0px;
+	margin-bottom: 0px;
+    width: 100px;
+	height:100px;
+    z-index: 100;
+	background-color: #4f5382dd;
+	border-radius: 200px;
+	border-color: #572364dd;
+	border-width: 4px;
+	border-style: solid;
+}
+
 .image-header-logo {
     width: 90px; /* Set desired container size */
     height: 90px;
@@ -802,6 +817,16 @@ footer {
     position: fixed; /* Lo mantenemos fijo en la ventana */
     bottom: 20px; /* Distancia desde abajo */
     left: 20px; /* Distancia desde la izquierda */
+    width: 100px; /* Ancho del div */
+    height: 100px; /* Alto del div */
+    background-color: #00000000; /* Color de fondo */
+    padding: 10px; /* Espacio interno */
+}
+
+#botonFlotanteBajar {
+    position: fixed; /* Lo mantenemos fijo en la ventana */
+    bottom: 20px; /* Distancia desde abajo */
+    right: 20px; /* Distancia desde la derecha */
     width: 100px; /* Ancho del div */
     height: 100px; /* Alto del div */
     background-color: #00000000; /* Color de fondo */

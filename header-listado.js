@@ -52,6 +52,17 @@ function createHeader() {
             </a>
         </div>
 
+        <div id="botonFlotanteBajar">
+            <a href="#pau" >
+                <div class="fondo-header-bajar">
+                    <div class="image-header">
+                        <img src="Imagenes/Header/subir.webp">
+                    </div>
+                    <h2>Bajar</h2>
+                </div>
+            </a>
+        </div>
+
         <div id="botonFlotanteLogo">
             <a href="https://www.iax.es/" >
                 <img src="Imagenes/Header/logo-iax.webp" class="image-header-logo">

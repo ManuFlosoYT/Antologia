@@ -56,7 +56,7 @@ function createHeader() {
             <a href="#pau" >
                 <div class="fondo-header-bajar">
                     <div class="image-header">
-                        <img src="Imagenes/Header/subir.webp">
+                        <img src="Imagenes/Header/bajar.webp">
                     </div>
                     <h2>Bajar</h2>
                 </div>

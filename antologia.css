@@ -725,6 +725,22 @@ footer {
 	border-style: solid;
 }
 
+.fondo-header-pau{
+	padding:0px;
+	margin-right: 0px;
+	margin-left: 10px;
+	margin-top:0px;
+	margin-bottom: 0px;
+    width: 100px;
+	height:85px;
+    z-index: 100;
+	background-color: #679f5add;
+	border-radius: 5px;
+	border-color: #3a9d23dd;
+	border-width: 4px;
+	border-style: solid;
+}
+
 .fondo-header-sorteos{
 	padding:0px;
 	background-color: #95959541;

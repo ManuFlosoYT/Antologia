@@ -26,7 +26,17 @@ function createHeader() {
                                 <h2>Descargar PDF</h2>
                             </div>
                         </a>
-                    </li>    
+                    </li>  
+                    <li>
+                        <a href="pau/miguel_hernandez.html">
+                            <div class="fondo-header-pau">
+                                <div class="image-header">
+                                    <img src="Imagenes/Header/examen.png">
+                                </div>
+                                <h2>PAU</h2>
+                            </div>
+                        </a>
+                    </li>  
                     <li>
                         <a href="Sorteos/Sorteos.html">
                             <div class="fondo-header-sorteos">

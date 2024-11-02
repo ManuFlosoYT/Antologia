@@ -58,7 +58,7 @@ function createHeader() {
                     <div class="image-header">
                         <img src="Imagenes/Header/bajar.webp">
                     </div>
-                    <h2>Bajar</h2>
+                    <h2>PAU</h2>
                 </div>
             </a>
         </div>

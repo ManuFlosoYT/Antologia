@@ -42,7 +42,7 @@ function createHeader() {
         </div> 
 
         <div id="botonFlotanteSubir">
-            <a href="#" >
+            <a href="#">
                 <div class="fondo-header-subir">
                     <div class="image-header">
                         <img src="Imagenes/Header/subir.webp">
@@ -53,7 +53,7 @@ function createHeader() {
         </div>
 
         <div id="botonFlotanteBajar">
-            <a href="#pau" >
+            <a href="#pau">
                 <div class="fondo-header-bajar">
                     <div class="image-header">
                         <img src="Imagenes/Header/bajar.webp">

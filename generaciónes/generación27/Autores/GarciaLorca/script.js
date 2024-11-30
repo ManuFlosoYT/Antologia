@@ -161,6 +161,37 @@ fetch('Textos/aurora.txt')
     }
 ).catch(error => console.error('Error fetching file:', error));
 
+
+//Soneto del amor oscuro
+
+fetch('Textos/oscuro.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(ABDUZCAN)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(Sonetos del amor oscuro)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(ABDUZCAN)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('oscuro').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
+
+fetch('Textos/oscuro2.txt') //CAMBIAR ESTO PARA CONFIGURAR
+  .then(response => response.text())
+  .then(texto => {
+    const frasesEnNegrita = /(ABDUZCAN)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesEnCursiva = /(ABDUZCAN)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+    const frasesSubrayadas = /(ABDUZCAN)/gi; //CAMBIAR ESTO PARA CONFIGURAR
+
+    const textoFormateado1 = texto.replace(frasesEnNegrita, '<b>$&</b>'); 
+    const textoFormateado2 = textoFormateado1.replace(frasesEnCursiva, '<i>$&</i>'); 
+    const textoFinal = textoFormateado2.replace(frasesSubrayadas, '<u>$&</u>');
+
+    document.getElementById('oscuro2').innerHTML = textoFinal; //CAMBIAR ESTO PARA CONFIGURAR
+}).catch(error => console.error('Error al cargar el archivo:', error));
+
 fetch('Textos/guirnalda.txt')
     .then(response => response.text())
     .then(text => 
@@ -176,3 +207,4 @@ fetch('Textos/verdad.txt')
         document.getElementById('verdad').textContent = text;
     }
 ).catch(error => console.error('Error fetching file:', error));
+
